@@ -4,19 +4,27 @@
   const DISPLAY = {
     "Queens": {
       label: "Queens",
-      desc: "Kinky crowns, rich curves, and rhythm. Beauty, visibility, identity, representation, belonging."
+      desc:    <blockquote style="text-align:center; font-size:1.1rem; font-style:italic; color:#555;"> 
+        "Kinky crowns, rich curves, and rhythm. Beauty, visibility, identity, representation, belonging."
+          </blockquote>
     },
     "Dreamscapes and Nightmares": {
       label: "Dreamscapes and Nightmares",
-      desc: "Without darkness, how would we know the light? Monsters and myth step from the shadows—eerie, surreal, and close to the veil."
+      desc:   <blockquote style="text-align:center; font-size:1.1rem; font-style:italic; color:#555;"> 
+        "Without darkness, how would we know the light? Monsters and myth step from the shadows—eerie, surreal, and close to the veil."
+          </blockquote>
     },
     "Unheard Echoes": {
       label: "Unheard Echoes",
-      desc: "Chains, crowns, tears—the weight and endurance of Black women. A hand extended to those who stumble; a tribute to those who keep pushing through treachery."
+      desc:    <blockquote style="text-align:center; font-size:1.1rem; font-style:italic; color:#555;">
+        "Chains, crowns, tears—the weight and endurance of Black women. A hand extended to those who stumble; a tribute to those who keep pushing through treachery."
+          </blockquote>
     },
     "In Memory of": {
       label: "In Memory of",
-      desc: "Tender reckonings, grief-work, remembrance, and the quiet power of holding on."
+      desc:    <blockquote style="text-align:center; font-size:1.1rem; font-style:italic; color:#555;">
+        "Tender reckonings, grief-work, remembrance, and the quiet power of holding on."
+        </blockquote>
     }
   };
 
