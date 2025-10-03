@@ -96,14 +96,19 @@
       h3.textContent = display.label;
       h3.id = "sec-" + slugify(display.label);
       wrap.appendChild(h3);
-
-      // Description under the heading
-      if (display.desc) {
-        const p = document.createElement("p");
-        p.style.cssText = "margin:.25rem 0 1rem; opacity:.8; max-width:70ch;";
-        p.textContent = display.desc;
-        wrap.appendChild(p);
-      }
+      
+// Description under the heading (supports HTML via descHtml; falls back to plain text)
+if (display.descHtml) {
+  const holder = document.createElement('div');
+  holder.innerHTML = display.descHtml.trim();
+  const node = holder.firstElementChild || holder;
+  wrap.appendChild(node);
+} else if (display.desc) {
+  const p = document.createElement('blockquote');
+  p.className = 'theme-desc';
+  p.textContent = display.desc;
+  wrap.appendChild(p);
+}
 
       // Grid of items
       const grid = document.createElement("div");
