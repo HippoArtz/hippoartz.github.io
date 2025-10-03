@@ -1,0 +1,25 @@
+
+/* Lightbox overlay */
+#lightbox {
+  position: fixed; inset: 0; display: none;
+  align-items: center; justify-content: center;
+  background: rgba(0,0,0,.6); backdrop-filter: blur(2px);
+  z-index: 1000; padding: 5vmin;
+}
+#lightbox.open { display: flex; }
+#lightbox .wrap {
+  position: relative; max-width: 95vw; max-height: 90vh;
+  background: var(--card, #111); border: 1px solid var(--border, #333);
+  border-radius: 12px; padding: 10px; box-shadow: 0 10px 30px rgba(0,0,0,.5);
+}
+#lightbox img {
+  display:block; max-width: 90vw; max-height: 75vh; width:auto; height:auto; margin: 0 auto;
+}
+#lightbox .lb-title {
+  color: var(--text, #eee); font-size: .95rem; margin-top: 8px; text-align: center;
+}
+#lightbox .close {
+  position: absolute; top: 6px; right: 8px;
+  background: transparent; color: var(--text, #fff);
+  border: none; font-size: 1.5rem; cursor: pointer;
+}
