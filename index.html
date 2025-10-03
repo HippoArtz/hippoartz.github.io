@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Hippo.Artz | Hippo Artz</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hippo Artz</title>
 
-  <!-- Your styles + lightbox CSS -->
+  <!-- Core styles -->
   <link rel="stylesheet" href="style.css?v=2" />
-  <link rel="stylesheet" href="lightbox.css?v=4" />
+  <link rel="stylesheet" href="lightbox.css?v=7" />
 
   <style>
     /* Layout tweaks for header/footer logos (translucent-safe) */
@@ -18,12 +18,12 @@
       padding: 10px 0;
     }
     .logo-wrap img {
-      height: 60px; /* adjust as desired */
+      height: 60px;
       display: block;
-      /* If translucency makes it hard to read on your background,
-         uncomment the next two lines: */
-      /* background: rgba(255,255,255,0.7);
-         border-radius: 8px; */
+      /* If translucency makes it hard to see on your background, uncomment:
+      background: rgba(255,255,255,0.7);
+      border-radius: 8px;
+      */
     }
     header nav a { margin-right: 16px; }
 
@@ -34,7 +34,6 @@
       float: right;
       margin: 0 0 1rem 1rem;
     }
-    /* Optional second about image (centered) */
     #about img.artist-photo-2 {
       max-width: 420px;
       border-radius: 12px;
@@ -71,7 +70,7 @@
 </head>
 
 <body>
-  <!-- Header / Nav with logo at the top -->
+  <!-- Header / Nav -->
   <header>
     <div class="logo-wrap">
       <img src="hippoartzlogo.jpg" alt="Hippo.Artz logo">
@@ -85,26 +84,87 @@
     </div>
   </header>
 
+  <!-- Hero -->
+  <section id="hero" class="hero">
+    <h1>Welcome to Hippo Artz</h1>
+    <p>Hippo.Artz is where emotion, dream, and defiance spill across canvas.</p>
+    <div class="cta-row">
+      <a class="btn ghost" href="#about">About the Alchemist</a>
+      <a class="btn" href="#gallery">Explore Portfolio</a>
+      <a class="btn" href="#contact">Get in Touch</a>
+    </div>
+
+    <div class="quick-links" style="margin-top:1.25rem;">
+      <div class="card">
+        <a href="#about">About the Alchemist →</a>
+        <p>Meet Hippo.Artz, acrylic alchemist and visual storyweaver.</p>
+      </div>
+      <div class="card">
+        <a href="#gallery">Explore Portfolio →</a>
+        <p>Surreal figures: fracture, bloom, unbowed.</p>
+      </div>
+      <div class="card">
+        <a href="#contact">Get in Touch →</a>
+        <p>Commissions, collabs, deep questions—bring them.</p>
+      </div>
+    </div>
+  </section>
+
   <!-- About -->
-  <section id="about">
+  <section id="about" class="section">
     <h2>About</h2>
-    <!-- About image (Hippo.Artz with Mother Earth) -->
     <img src="me1.jpg" alt="Hippo.Artz with 'Mother Earth' artwork" class="artist-photo">
-    <p>Hippo.Artz paints figures suspended in surreal landscapes—bodies reshaped by violence, survival, and reclamation. 
+    <p>Hippo.Artz paints figures suspended in surreal landscapes—bodies reshaped by violence, survival, and reclamation.
        The work sits in the tension between oppression and defiance, inviting viewers to look longer than comfort allows.</p>
 
-    <!-- Optional second About image (studio). Uncomment if you want it visible now.
+    <h2>Meet the Acrylic Alchemist</h2>
+    <p>Welcome to HIPPO.ARTZ. This site is a novice apothecary of experimentation with color, texture, and storytelling. 
+       <strong>Hippo.Artz</strong> is a <strong>self-taught acrylic painter</strong>, a <em>visual storyweaver</em>, and a proud blerd. 
+       The canvases explore how <strong>emotion</strong> and <strong>identity</strong> take shape through bold strokes, surreal dreamscapes, and Black Girl Magic.</p>
+
+    <blockquote style="text-align:center; font-size:1.1rem; font-style:italic; color:#555;">
+      “I am a pessimist if I am not careful.” — Octavia E. Butler
+    </blockquote>
+
+    <p>Every piece is layered with <strong>emotion</strong>, lived experience, and a shimmer of <em>Black Girl Magic</em>. 
+       Acrylic on canvas and unfinished wood is the primary medium.</p>
+
     <img src="mestudio.jpg" alt="Hippo.Artz in studio" class="artist-photo-2">
-    -->
+
+    <p>Outside the studio: public health work and two cats, Fawn and Goatee. 
+       This site is both portfolio and playground—browse, reflect, connect. <em>Be well.</em></p>
   </section>
 
-  <!-- Gallery (auto-rendered from gallery.json) -->
-  <section id="gallery">
+  <!-- Projects -->
+  <section id="projects" class="section">
+    <h2>Current Creative Projects</h2>
+    <h3>Unheard Echos</h3>
+    <p>Chains, crowns, tears — the weight and endurance of Black women. A hand extended to those who stumble; a tribute to those who keep pushing through treachery.</p>
+
+    <h3>Dreamscapes & Nightmares</h3>
+    <p>Without darkness, how would we know the light? Monsters and myth step from the shadows — eerie, surreal, and close to the veil.</p>
+
+    <h3>Queens</h3>
+    <p>Kinky crowns, rich curves, and rhythm. Beauty, visibility, identity, representation, belonging. We are here.</p>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery" class="section">
     <h2>Gallery</h2>
-    <!-- Tiles will be injected by render-gallery.js -->
+
+    <!-- Theme Shortcuts (buttons that jump to the rendered sections) -->
+    <div class="theme-shortcuts" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:12px; margin-bottom:1rem;">
+      <button data-goto="Queens">Queens</button>
+      <button data-goto="Unheard Echos">Unheard Echos</button>
+      <button data-goto="Nightmares">Nightmares</button>
+      <button data-goto="Dreamscapes">Dreamscapes</button>
+      <button data-goto="In Memory of">In Memory of</button>
+    </div>
+
+    <!-- The gallery items will be injected right below by render-gallery.js -->
   </section>
 
-  <!-- Recent Show (the exhibition photo) -->
+  <!-- Recent Show -->
   <section id="recent-show">
     <h2>Recent Show</h2>
     <img src="me-artspace.jpg" alt="Hippo.Artz showcasing artwork at a recent exhibition" class="fullbleed">
@@ -118,9 +178,23 @@
   </section>
 
   <!-- Contact -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:hippo.artz@gmail.com">hippo,artz@gmail.com</a></p>
+  <section id="contact" class="section">
+    <h2>Get in Touch</h2>
+    <p>Commissions, collabs, or the deep questions you can’t shake—bring them.</p>
+    <p><strong>Email:</strong> <a href="mailto:hippo.artz@gmail.com">hippo.artz@gmail.com</a> &nbsp;|&nbsp; <strong>Phone:</strong> <a href="tel:+18043477574">804-347-7574</a></p>
+
+    <div class="social">
+      <a href="https://www.amazon.com/hz/wishlist/ls/1KUUML0G178XD?ref_=wl_share" target="_blank" rel="noopener">Amazon Wish List</a>
+      <a href="https://www.tiktok.com/@hippo.artz?_t=ZT-8zaFoODn5yg&_r=1" target="_blank" rel="noopener">TikTok</a>
+      <a href="https://www.facebook.com/share/1CiBRwgVrH/" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://instagram.com/hippo.artz" target="_blank" rel="noopener">Instagram</a>
+    </div>
+
+    <section id="rights" class="section" style="padding-top:1rem;">
+      <h2>Copyright & Image Rights</h2>
+      <p>All artwork on this site is original and created by Hippo.Artz. © 2025 Hippo.Artz. All rights reserved. 
+         Unauthorized use, reproduction, or distribution is prohibited. Licensing, press use, and collaborations are welcome—please <a href="#contact">get in touch</a>.</p>
+    </section>
   </section>
 
   <!-- Footer with logo at the bottom -->
@@ -128,10 +202,47 @@
     <div class="logo-wrap" style="justify-content:center;">
       <img src="hippoartzlogo.jpg" alt="Hippo.Artz logo">
     </div>
+    <p style="text-align:center; opacity:.7;">© 2025 Hippo.Artz. All rights reserved.</p>
   </footer>
 
-  <!-- Scripts at the end -->
-  <script src="lightbox.js?v=4" defer></script>
-  <script src="render-gallery.js?v=4" defer></script>
+  <!-- Scripts: load AFTER the page -->
+  <script src="lightbox.js?v=7" defer></script>
+  <script src="render-gallery.js?v=7" defer></script>
+
+  <!-- Wire up theme buttons to the rendered section headings -->
+  <script>
+    // After render-gallery.js runs, it creates <h3> headings for each section.
+    // This assigns IDs to those headings and makes the buttons scroll to them.
+    document.addEventListener('DOMContentLoaded', function () {
+      function slugify(txt){ return String(txt).toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,''); }
+
+      function assignIds() {
+        document.querySelectorAll('#gallery h3').forEach(h3 => {
+          const name = h3.textContent.trim();
+          const id = 'sec-' + slugify(name);
+          h3.id = id;
+        });
+      }
+
+      // Try at intervals in case render finishes a tick later
+      let tries = 0;
+      const t = setInterval(() => {
+        if (document.querySelector('#gallery h3')) {
+          clearInterval(t);
+          assignIds();
+        }
+        if (++tries > 30) clearInterval(t);
+      }, 200);
+
+      document.querySelectorAll('.theme-shortcuts button').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const label = btn.getAttribute('data-goto');
+          const id = 'sec-' + slugify(label);
+          const target = document.getElementById(id);
+          if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      });
+    });
+  </script>
 </body>
 </html>
