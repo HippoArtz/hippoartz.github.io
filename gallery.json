@@ -1,9 +1,8 @@
 {
   "sections": [
     "Queens",
-    "Unheard Echos",
-    "Nightmares",
-    "Dreamscapes",
+    "Dreamscapes and Nightmares",
+    "Unheard Echoes",
     "In Memory of"
   ],
   "items": [
@@ -16,9 +15,9 @@
       "year": "",
       "medium": "acrylic paint on canvas",
       "size": "24x24in",
-      "price": "",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "Dreamscapes"
     },
     {
       "id": "art-0002",
@@ -28,10 +27,10 @@
       "alt": "tbd",
       "year": "",
       "medium": "acrylic paint on wood",
-      "size": " -",
-      "price": "",
+      "size": "-",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "Dreamscapes"
     },
     {
       "id": "art-0003",
@@ -41,10 +40,10 @@
       "alt": "friendly cow in good health",
       "year": "",
       "medium": "acrylic paint on wood",
-      "size": " -",
-      "price": "",
+      "size": "-",
+      "price": "Available on request",
       "notes": "happy cow in lively form",
-      "section": ""
+      "section": "Dreamscapes"
     },
     {
       "id": "art-0004",
@@ -54,10 +53,10 @@
       "alt": "A woman clad in a green dress reaches across the divide to a red dragon who reaches across to her",
       "year": "",
       "medium": "acrylic paint on canvas",
-      "size": " -",
-      "price": "",
+      "size": "-",
+      "price": "Available on request",
       "notes": "Soul Mate",
-      "section": ""
+      "section": "Dreamscapes"
     },
     {
       "id": "art-0005",
@@ -68,9 +67,9 @@
       "year": "",
       "medium": "acrylic paint on canvas",
       "size": "16x20in",
-      "price": "",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "Dreamscapes"
     },
     {
       "id": "art-0006",
@@ -81,9 +80,9 @@
       "year": "",
       "medium": "acrylic paint on wood",
       "size": "16x20in",
-      "price": "",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "Dreamscapes"
     },
     {
       "id": "art-0007",
@@ -94,9 +93,9 @@
       "year": "",
       "medium": "acrylic paint on canvas",
       "size": "",
-      "price": "",
+      "price": "Available on request",
       "notes": "View a bird's eye",
-      "section": ""
+      "section": "Dreamscapes"
     },
     {
       "id": "art-0008",
@@ -107,9 +106,9 @@
       "year": "",
       "medium": "acrylic paint on canvas",
       "size": "",
-      "price": "",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "Dreamscapes"
     },
     {
       "id": "art-0009",
@@ -120,9 +119,9 @@
       "year": "",
       "medium": "acrylic paint on wood",
       "size": "",
-      "price": "",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "Dreamscapes"
     },
     {
       "id": "art-0010",
@@ -133,9 +132,9 @@
       "year": "",
       "medium": "acrylic paint on canvas",
       "size": "",
-      "price": "",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "Dreamscapes"
     },
     {
       "id": "art-0011",
@@ -146,9 +145,9 @@
       "year": "",
       "medium": "acrylic paint on canvas",
       "size": "",
-      "price": "",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "Dreamscapes"
     },
     {
       "id": "art-0012",
@@ -159,9 +158,9 @@
       "year": "",
       "medium": "acrylic paint on wood",
       "size": "16x20in",
-      "price": "",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "Dreamscapes"
     },
     {
       "id": "art-0013",
@@ -172,9 +171,9 @@
       "year": "",
       "medium": "acrylic paint on canvas",
       "size": "",
-      "price": "",
+      "price": "Available on request",
       "notes": "Cerberus, griffin, dragon and a unicorn",
-      "section": ""
+      "section": "Dreamscapes"
     },
     {
       "id": "art-0014",
@@ -185,9 +184,9 @@
       "year": "",
       "medium": "acrylic paint on canvas",
       "size": "",
-      "price": "",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "Dreamscapes"
     },
     {
       "id": "art-0015",
@@ -198,9 +197,9 @@
       "year": "",
       "medium": "acrylic paint on wood",
       "size": "16x20in",
-      "price": "",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "Nighmares"
     },
     {
       "id": "art-0016",
@@ -210,10 +209,10 @@
       "alt": "decaying cow with top of skull removed",
       "year": "",
       "medium": "acrylic paint on canvas",
-      "size": " -",
-      "price": "",
+      "size": "-",
+      "price": "Available on request",
       "notes": "mad cow in walking dead form",
-      "section": ""
+      "section": "Nighmares"
     },
     {
       "id": "art-0017",
@@ -224,9 +223,9 @@
       "year": "",
       "medium": "acrylic paint on canvas",
       "size": "24x36in",
-      "price": "",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "Nighmares"
     },
     {
       "id": "art-0018",
@@ -236,10 +235,10 @@
       "alt": "a woman's throat bulges with the dragon she attempts to remove from her throat",
       "year": "",
       "medium": "acrylic paint on wood",
-      "size": " -",
-      "price": "",
+      "size": "-",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "Nighmares"
     },
     {
       "id": "art-0019",
@@ -250,9 +249,9 @@
       "year": "",
       "medium": "acrylic paint on canvas",
       "size": "sketch on paper",
-      "price": "",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "Nighmares"
     },
     {
       "id": "art-0020",
@@ -263,9 +262,9 @@
       "year": "",
       "medium": "acrylic paint on canvas",
       "size": "sketch on paper",
-      "price": "",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "Nighmares"
     },
     {
       "id": "art-0021",
@@ -276,9 +275,9 @@
       "year": "",
       "medium": "acrylic paint on wood",
       "size": "sketch on paper",
-      "price": "",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "Nighmares"
     },
     {
       "id": "art-0022",
@@ -288,10 +287,10 @@
       "alt": "An open eye with a golden zipper below its lids",
       "year": "",
       "medium": "acrylic paint on canvas",
-      "size": " -",
-      "price": "",
+      "size": "-",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "Nighmares"
     },
     {
       "id": "art-0023",
@@ -301,10 +300,10 @@
       "alt": "A brown eye with green skin and blue tears",
       "year": "",
       "medium": "acrylic paint on canvas",
-      "size": " -",
-      "price": "",
+      "size": "-",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "Nighmares"
     },
     {
       "id": "art-0024",
@@ -314,10 +313,10 @@
       "alt": "A pink woman with a mouth at her stomach",
       "year": "",
       "medium": "acrylic paint on wood",
-      "size": " -",
-      "price": "",
+      "size": "-",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "Nighmares"
     },
     {
       "id": "art-0025",
@@ -328,9 +327,9 @@
       "year": "",
       "medium": "acrylic paint on canvas",
       "size": "sketch on paper",
-      "price": "",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "Nighmares"
     },
     {
       "id": "art-0026",
@@ -340,10 +339,10 @@
       "alt": "An orange iris made of tentacles",
       "year": "",
       "medium": "acrylic paint on canvas",
-      "size": " -",
-      "price": "",
+      "size": "-",
+      "price": "Available on request",
       "notes": "Eye or Tentacle",
-      "section": ""
+      "section": "Nighmares"
     },
     {
       "id": "art-0027",
@@ -353,10 +352,10 @@
       "alt": "A green figure smiles as the pimples are popped",
       "year": "",
       "medium": "acrylic paint on wood",
-      "size": " -",
-      "price": "",
+      "size": "-",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "Nighmares"
     },
     {
       "id": "art-0028",
@@ -367,9 +366,9 @@
       "year": "",
       "medium": "acrylic paint on canvas",
       "size": "16x20in",
-      "price": "",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "Nighmares"
     },
     {
       "id": "art-0029",
@@ -380,9 +379,9 @@
       "year": "",
       "medium": "acrylic paint on canvas",
       "size": "16x20in",
-      "price": "",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "Nighmares"
     },
     {
       "id": "art-0030",
@@ -393,9 +392,9 @@
       "year": "",
       "medium": "acrylic paint on wood",
       "size": "",
-      "price": "",
+      "price": "Available on request",
       "notes": "Eye see an itsy bitsy spider",
-      "section": ""
+      "section": "Nighmares"
     },
     {
       "id": "art-0031",
@@ -406,9 +405,9 @@
       "year": "",
       "medium": "acrylic paint on canvas",
       "size": "",
-      "price": "",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "Nighmares"
     },
     {
       "id": "art-0032",
@@ -419,9 +418,9 @@
       "year": "",
       "medium": "acrylic paint on canvas",
       "size": "16x20in",
-      "price": "",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "Nighmares"
     },
     {
       "id": "art-0033",
@@ -432,9 +431,9 @@
       "year": "",
       "medium": "acrylic paint on wood",
       "size": "16x20in",
-      "price": "",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "Nighmares"
     },
     {
       "id": "art-0034",
@@ -445,9 +444,9 @@
       "year": "",
       "medium": "acrylic paint on canvas",
       "size": "",
-      "price": "",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "Nighmares"
     },
     {
       "id": "art-0035",
@@ -458,9 +457,9 @@
       "year": "",
       "medium": "acrylic paint on canvas",
       "size": "",
-      "price": "",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "Nighmares"
     },
     {
       "id": "art-0036",
@@ -471,9 +470,9 @@
       "year": "",
       "medium": "acrylic paint on wood",
       "size": "16x20in",
-      "price": "",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "Other"
     },
     {
       "id": "art-0037",
@@ -484,9 +483,9 @@
       "year": "",
       "medium": "acrylic paint on canvas",
       "size": "16x20in",
-      "price": "",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "Other"
     },
     {
       "id": "art-0038",
@@ -497,9 +496,9 @@
       "year": "",
       "medium": "acrylic paint on canvas",
       "size": "16x20in",
-      "price": "",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "Other"
     },
     {
       "id": "art-0039",
@@ -509,10 +508,10 @@
       "alt": "tbd",
       "year": "",
       "medium": "acrylic paint on wood",
-      "size": " -",
-      "price": "",
+      "size": "-",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "Other"
     },
     {
       "id": "art-0040",
@@ -522,10 +521,10 @@
       "alt": "tbd",
       "year": "",
       "medium": "acrylic paint on canvas",
-      "size": " -",
-      "price": "",
+      "size": "-",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "Other"
     },
     {
       "id": "art-0041",
@@ -536,9 +535,9 @@
       "year": "",
       "medium": "acrylic paint on canvas",
       "size": "16x20in",
-      "price": "",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "Queens"
     },
     {
       "id": "art-0042",
@@ -549,9 +548,9 @@
       "year": "",
       "medium": "acrylic paint on wood",
       "size": "16x20in",
-      "price": "",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "Queens"
     },
     {
       "id": "art-0043",
@@ -561,10 +560,10 @@
       "alt": "a woman sits on the edge of her bed with a weary look, hair and clothes disheveled",
       "year": "",
       "medium": "acrylic paint on canvas",
-      "size": " -",
-      "price": "",
+      "size": "-",
+      "price": "Available on request",
       "notes": "A modern take on the historic painting \"Blue Monday",
-      "section": ""
+      "section": "Queens"
     },
     {
       "id": "art-0044",
@@ -575,9 +574,9 @@
       "year": "",
       "medium": "acrylic paint on canvas",
       "size": "16x20in",
-      "price": "",
+      "price": "Available on request",
       "notes": "Pain blossoms into a garden that insists on being seen.",
-      "section": ""
+      "section": "Queens"
     },
     {
       "id": "art-0045",
@@ -588,9 +587,9 @@
       "year": "",
       "medium": "acrylic paint on wood",
       "size": "16x20in",
-      "price": "",
+      "price": "Available on request",
       "notes": "A body becomes the landscape—vacation as return to the elemental.",
-      "section": ""
+      "section": "Queens"
     },
     {
       "id": "art-0046",
@@ -600,10 +599,10 @@
       "alt": "tbd",
       "year": "",
       "medium": "acrylic paint on canvas",
-      "size": " -",
-      "price": "",
+      "size": "-",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "Queens"
     },
     {
       "id": "art-0047",
@@ -614,9 +613,9 @@
       "year": "",
       "medium": "acrylic paint on canvas",
       "size": "12x12in",
-      "price": "",
+      "price": "Available on request",
       "notes": "Cheese",
-      "section": ""
+      "section": "Queens"
     },
     {
       "id": "art-0048",
@@ -627,9 +626,9 @@
       "year": "",
       "medium": "acrylic paint on wood",
       "size": "16x20in",
-      "price": "",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "Queens"
     },
     {
       "id": "art-0049",
@@ -640,9 +639,9 @@
       "year": "",
       "medium": "acrylic paint on canvas",
       "size": "12x12in",
-      "price": "",
+      "price": "Available on request",
       "notes": "Mothernature's Bane",
-      "section": ""
+      "section": "Queens"
     },
     {
       "id": "art-0050",
@@ -653,9 +652,9 @@
       "year": "",
       "medium": "acrylic paint on canvas",
       "size": "16x20in",
-      "price": "",
+      "price": "Available on request",
       "notes": "Her wild curls, streaked in red, white and blue are a glorious crown and a ghastly shroud. She ignores the hooded shadow- the silent witness. Though consumed by the drapings of this country, she stands proud, shoulders back head high, unbowed.",
-      "section": ""
+      "section": "Queens"
     },
     {
       "id": "art-0051",
@@ -666,9 +665,9 @@
       "year": "",
       "medium": "acrylic paint on wood",
       "size": "16x20in",
-      "price": "",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "Queens"
     },
     {
       "id": "art-0052",
@@ -679,9 +678,9 @@
       "year": "",
       "medium": "acrylic paint on canvas",
       "size": "16x20in",
-      "price": "",
+      "price": "Available on request",
       "notes": "She doesn’t leave the world; she rewrites it.",
-      "section": ""
+      "section": "Queens"
     },
     {
       "id": "art-0053",
@@ -692,9 +691,9 @@
       "year": "",
       "medium": "acrylic paint on canvas",
       "size": "12x12in",
-      "price": "",
+      "price": "Available on request",
       "notes": "Starry eyed woman with kaleidoscope of colors in her eyes",
-      "section": ""
+      "section": "Queens"
     },
     {
       "id": "art-0054",
@@ -705,9 +704,9 @@
       "year": "",
       "medium": "acrylic paint on wood",
       "size": "16x20in",
-      "price": "",
+      "price": "Available on request",
       "notes": "Sun and Flowers",
-      "section": ""
+      "section": "Queens"
     },
     {
       "id": "art-0055",
@@ -718,9 +717,9 @@
       "year": "",
       "medium": "acrylic paint on canvas",
       "size": "16x20in",
-      "price": "",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "Queens"
     },
     {
       "id": "art-0056",
@@ -731,9 +730,9 @@
       "year": "",
       "medium": "acrylic paint on canvas",
       "size": "18x24in",
-      "price": "",
+      "price": "Available on request",
       "notes": "Regal in all things",
-      "section": ""
+      "section": "Queens"
     },
     {
       "id": "art-0057",
@@ -744,9 +743,9 @@
       "year": "",
       "medium": "acrylic paint on wood",
       "size": "",
-      "price": "",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "Queens"
     },
     {
       "id": "art-0058",
@@ -757,9 +756,9 @@
       "year": "",
       "medium": "acrylic paint on canvas",
       "size": "16x20in",
-      "price": "",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "Queens"
     },
     {
       "id": "art-0059",
@@ -770,9 +769,9 @@
       "year": "",
       "medium": "acrylic paint on canvas",
       "size": "",
-      "price": "",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "Queens"
     },
     {
       "id": "art-0060",
@@ -783,9 +782,9 @@
       "year": "",
       "medium": "acrylic paint on wood",
       "size": "16x20in",
-      "price": "",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "Queens"
     },
     {
       "id": "art-0061",
@@ -796,9 +795,9 @@
       "year": "",
       "medium": "acrylic paint on canvas",
       "size": "",
-      "price": "",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "Queens"
     },
     {
       "id": "art-0062",
@@ -809,9 +808,9 @@
       "year": "",
       "medium": "acrylic paint on canvas",
       "size": "",
-      "price": "",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "Queens"
     },
     {
       "id": "art-0063",
@@ -822,9 +821,9 @@
       "year": "",
       "medium": "acrylic paint on wood",
       "size": "16x20in",
-      "price": "",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "Queens"
     },
     {
       "id": "art-0064",
@@ -835,9 +834,9 @@
       "year": "",
       "medium": "acrylic paint on canvas",
       "size": "16x20in",
-      "price": "",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "Queens"
     },
     {
       "id": "art-0065",
@@ -848,9 +847,9 @@
       "year": "",
       "medium": "acrylic paint on canvas",
       "size": "16x20in",
-      "price": "",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "Queens"
     },
     {
       "id": "art-0066",
@@ -861,9 +860,9 @@
       "year": "",
       "medium": "acrylic paint on wood",
       "size": "16x20in",
-      "price": "",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "Queens"
     },
     {
       "id": "art-0067",
@@ -874,9 +873,9 @@
       "year": "",
       "medium": "acrylic paint on canvas",
       "size": "16x20in",
-      "price": "",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "Queens"
     },
     {
       "id": "art-0068",
@@ -887,9 +886,9 @@
       "year": "",
       "medium": "acrylic paint on canvas",
       "size": "16x20in",
-      "price": "",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "Queens"
     },
     {
       "id": "art-0069",
@@ -900,9 +899,9 @@
       "year": "",
       "medium": "acrylic paint on wood",
       "size": "",
-      "price": "",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "Queens"
     },
     {
       "id": "art-0070",
@@ -913,9 +912,9 @@
       "year": "",
       "medium": "acrylic paint on canvas",
       "size": "16x20in",
-      "price": "",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "Queens"
     },
     {
       "id": "art-0071",
@@ -926,9 +925,9 @@
       "year": "",
       "medium": "acrylic paint on canvas",
       "size": "",
-      "price": "",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "Queens"
     },
     {
       "id": "art-0072",
@@ -939,9 +938,9 @@
       "year": "",
       "medium": "acrylic paint on wood",
       "size": "",
-      "price": "",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "Queens"
     },
     {
       "id": "art-0073",
@@ -952,9 +951,9 @@
       "year": "",
       "medium": "acrylic paint on canvas",
       "size": "",
-      "price": "",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "Queens"
     },
     {
       "id": "art-0074",
@@ -965,9 +964,9 @@
       "year": "",
       "medium": "acrylic paint on canvas",
       "size": "",
-      "price": "",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "Queens"
     },
     {
       "id": "art-0075",
@@ -978,9 +977,9 @@
       "year": "",
       "medium": "acrylic paint on wood",
       "size": "",
-      "price": "",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "Queens"
     },
     {
       "id": "art-0076",
@@ -991,9 +990,9 @@
       "year": "",
       "medium": "acrylic paint on canvas",
       "size": "",
-      "price": "",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "Queens"
     },
     {
       "id": "art-0077",
@@ -1004,9 +1003,9 @@
       "year": "",
       "medium": "acrylic paint on canvas",
       "size": "16x20in",
-      "price": "",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "Queens"
     },
     {
       "id": "art-0078",
@@ -1017,22 +1016,22 @@
       "year": "",
       "medium": "acrylic paint on wood",
       "size": "",
-      "price": "",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "Queens"
     },
     {
       "id": "art-0079",
       "title": "Tree",
       "src": "Resize1/motherearthtree.jpg",
       "thumb": "Resize1/motherearthtree.jpg",
-      "alt": "A woman made of wood ",
+      "alt": "A woman made of wood",
       "year": "",
       "medium": "acrylic paint on canvas",
       "size": "",
-      "price": "",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "Queens"
     },
     {
       "id": "art-0080",
@@ -1043,9 +1042,9 @@
       "year": "",
       "medium": "acrylic paint on canvas",
       "size": "",
-      "price": "",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "Queens"
     },
     {
       "id": "art-0081",
@@ -1056,9 +1055,9 @@
       "year": "",
       "medium": "acrylic paint on wood",
       "size": "",
-      "price": "",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "Queens"
     },
     {
       "id": "art-0082",
@@ -1069,9 +1068,9 @@
       "year": "",
       "medium": "acrylic paint on canvas",
       "size": "16x20in",
-      "price": "",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "Queens"
     },
     {
       "id": "art-0083",
@@ -1082,9 +1081,9 @@
       "year": "",
       "medium": "acrylic paint on canvas",
       "size": "",
-      "price": "",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "Queens"
     },
     {
       "id": "art-0084",
@@ -1095,9 +1094,9 @@
       "year": "",
       "medium": "acrylic paint on wood",
       "size": "",
-      "price": "",
+      "price": "Available on request",
       "notes": "Attraction to knowledge and humor",
-      "section": ""
+      "section": "Queens"
     },
     {
       "id": "art-0085",
@@ -1108,9 +1107,9 @@
       "year": "",
       "medium": "acrylic paint on canvas",
       "size": "16x20in",
-      "price": "",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "Queens"
     },
     {
       "id": "art-0086",
@@ -1121,9 +1120,9 @@
       "year": "",
       "medium": "acrylic paint on canvas",
       "size": "16x20in",
-      "price": "",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "Queens"
     },
     {
       "id": "art-0087",
@@ -1134,9 +1133,9 @@
       "year": "",
       "medium": "acrylic paint on wood",
       "size": "16x20in",
-      "price": "",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "Unheard Echos"
     },
     {
       "id": "art-0088",
@@ -1147,9 +1146,9 @@
       "year": "",
       "medium": "acrylic paint on canvas",
       "size": "16x20in",
-      "price": "",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "Unheard Echos"
     },
     {
       "id": "art-0089",
@@ -1160,9 +1159,9 @@
       "year": "",
       "medium": "acrylic paint on canvas",
       "size": "16x20in",
-      "price": "",
-      "notes": " Folded in on herself, she is drenched so deep in sorrow tears and rain are indistinguishable. Vulnerability drips across her form, but there is strength in the stillness. This painting reflects grief that does not scream yet reshapes the body it inhabits.",
-      "section": ""
+      "price": "Available on request",
+      "notes": "Folded in on herself, she is drenched so deep in sorrow tears and rain are indistinguishable. Vulnerability drips across her form, but there is strength in the stillness. This painting reflects grief that does not scream yet reshapes the body it inhabits.",
+      "section": "Unheard Echos"
     },
     {
       "id": "art-0090",
@@ -1173,9 +1172,9 @@
       "year": "",
       "medium": "acrylic paint on wood",
       "size": "16x20in",
-      "price": "",
+      "price": "Available on request",
       "notes": "The stars and stripes are used to bind and gag her. Her tears escape unnoticed, but her eyes burn with fire. Silence is its own violence and she endures its weight",
-      "section": ""
+      "section": "Unheard Echos"
     },
     {
       "id": "art-0091",
@@ -1186,9 +1185,9 @@
       "year": "",
       "medium": "acrylic paint on canvas",
       "size": "16x20in",
-      "price": "",
+      "price": "Available on request",
       "notes": "She shoulders the weight of her many selves. Each face is a shield, each mask a silence. The illusion fractures under the immense pressure. The masks slip and she stands exposed, unguarded, naked",
-      "section": ""
+      "section": "Unheard Echos"
     },
     {
       "id": "art-0092",
@@ -1199,9 +1198,9 @@
       "year": "",
       "medium": "acrylic paint on canvas",
       "size": "16x20in",
-      "price": "",
+      "price": "Available on request",
       "notes": "She splits herself wide, tearing away the pieces that bind. From the wounds blooms force their way through. The blooms are vivid, unyielding, each petal is beauty and strength. Pain blossoms into a garden that insists on being seen.",
-      "section": ""
+      "section": "Unheard Echos"
     },
     {
       "id": "art-0093",
@@ -1212,9 +1211,9 @@
       "year": "",
       "medium": "acrylic paint on wood",
       "size": "16x20in",
-      "price": "",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "Unheard Echos"
     },
     {
       "id": "art-0094",
@@ -1225,9 +1224,9 @@
       "year": "",
       "medium": "acrylic paint on canvas",
       "size": "16x20in",
-      "price": "",
+      "price": "Available on request",
       "notes": "She fights her demons. A flailing hand breaks the surface, twisting capture into resistance. Drowning becomes survival. Defiance is survival even under the weight of herstory  and her future",
-      "section": ""
+      "section": "Unheard Echos"
     },
     {
       "id": "art-0095",
@@ -1238,9 +1237,9 @@
       "year": "",
       "medium": "acrylic paint on wood",
       "size": "16x20in",
-      "price": "",
+      "price": "Available on request",
       "notes": "Shedding tears, cloaked in rain",
-      "section": ""
+      "section": "Unheard Echos"
     },
     {
       "id": "art-0096",
@@ -1251,9 +1250,9 @@
       "year": "",
       "medium": "acrylic paint on canvas",
       "size": "12x12in",
-      "price": "",
+      "price": "Available on request",
       "notes": "With little concern for her, he ripped her heart in two",
-      "section": ""
+      "section": "Unheard Echos"
     },
     {
       "id": "art-0097",
@@ -1264,9 +1263,9 @@
       "year": "",
       "medium": "acrylic paint on canvas",
       "size": "16x20in",
-      "price": "",
+      "price": "Available on request",
       "notes": "Visible Wounds",
-      "section": ""
+      "section": "Unheard Echos"
     },
     {
       "id": "art-0098",
@@ -1277,9 +1276,9 @@
       "year": "",
       "medium": "acrylic paint on wood",
       "size": "16x20in",
-      "price": "",
+      "price": "Available on request",
       "notes": "Unshelved, paralyzed, limp- she falls. She tumbles into the depths as an unnatural force sustains her descent. With each passing moment, her voice, her agency and her strength peel away. In the end she is a shell of herself, a puppet with her strings cut.",
-      "section": ""
+      "section": "Unheard Echos"
     },
     {
       "id": "art-0099",
@@ -1290,9 +1289,9 @@
       "year": "",
       "medium": "acrylic paint on canvas",
       "size": "24x36in",
-      "price": "",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "Unheard Echos"
     },
     {
       "id": "art-0100",
@@ -1303,9 +1302,9 @@
       "year": "",
       "medium": "acrylic paint on canvas",
       "size": "16x20in",
-      "price": "",
+      "price": "Available on request",
       "notes": "",
-      "section": ""
+      "section": "Unheard Echos"
     },
     {
       "id": "art-0101",
@@ -1316,9 +1315,9 @@
       "year": "",
       "medium": "acrylic paint on wood",
       "size": "16x20in",
-      "price": "",
+      "price": "Available on request",
       "notes": "We all wear different armor",
-      "section": ""
+      "section": "Unheard Echos"
     },
     {
       "id": "art-0102",
@@ -1329,9 +1328,9 @@
       "year": "",
       "medium": "acrylic paint on canvas",
       "size": "16x20in",
-      "price": "",
+      "price": "Available on request",
       "notes": "When we allow others to control us",
-      "section": ""
+      "section": "Unheard Echos"
     },
     {
       "id": "art-0103",
@@ -1342,9 +1341,9 @@
       "year": "",
       "medium": "acrylic paint on canvas",
       "size": "",
-      "price": "",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "Unheard Echos"
     },
     {
       "id": "art-0104",
@@ -1355,9 +1354,9 @@
       "year": "",
       "medium": "acrylic paint on wood",
       "size": "16x20in",
-      "price": "",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "Unheard Echos"
     },
     {
       "id": "art-0105",
@@ -1368,9 +1367,9 @@
       "year": "",
       "medium": "acrylic paint on canvas",
       "size": "16x20in",
-      "price": "",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "Unheard Echos"
     },
     {
       "id": "art-0106",
@@ -1381,9 +1380,9 @@
       "year": "",
       "medium": "acrylic paint on canvas",
       "size": "16x20in",
-      "price": "",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "Unheard Echos"
     },
     {
       "id": "art-0107",
@@ -1393,10 +1392,10 @@
       "alt": "tbd",
       "year": "",
       "medium": "acrylic paint on wood",
-      "size": " -",
-      "price": "",
+      "size": "-",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "In Memory of"
     },
     {
       "id": "art-0108",
@@ -1406,10 +1405,10 @@
       "alt": "tbd",
       "year": "",
       "medium": "acrylic paint on canvas",
-      "size": " -",
-      "price": "",
+      "size": "-",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "In Memory of"
     },
     {
       "id": "art-0109",
@@ -1420,9 +1419,9 @@
       "year": "",
       "medium": "acrylic paint on canvas",
       "size": "16x20in",
-      "price": "",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "In Memory of"
     },
     {
       "id": "art-0110",
@@ -1433,9 +1432,9 @@
       "year": "",
       "medium": "acrylic paint on wood",
       "size": "16x20in",
-      "price": "",
+      "price": "Available on request",
       "notes": "tbd",
-      "section": ""
+      "section": "In Memory of"
     }
   ]
 }
