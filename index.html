@@ -1,118 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nita | Hippo Artz</title>
-  <link rel="stylesheet" href="style.css?v=2">
-  <link rel="stylesheet" href="lightbox.css?v=2">
+  <link rel="stylesheet" href="style.css?v=2" />
+  <link rel="stylesheet" href="lightbox.css?v=2" />
 </head>
-
 <body>
   <!-- Header / Nav -->
   <header>
     <h1>Hippo Artz</h1>
-<nav class="site-nav">
-  <a href="#projects">Projects</a>
-  <a href="#about">About</a>
-  <a href="#gallery">Portfolio</a>
-  <a href="#contact">Contact</a>
-</nav>
+    <nav class="site-nav">
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+      <a href="#gallery">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
+  <!-- Hero -->
+  <section id="hero" class="hero">
+    <h1>Welcome to Hippo Artz</h1>
+    <p>Hippo.Artz is where emotion, dream, and defiance spill across canvas.</p>
+    <div class="cta-row">
+      <a class="btn ghost" href="#about">About the Alchemist</a>
+      <a class="btn" href="#gallery">Explore Portfolio</a>
+      <a class="btn" href="#contact">Get in Touch</a>
+    </div>
+
+    <div class="quick-links" style="margin-top:1.25rem;">
+      <div class="card">
+        <a href="#about">About the Alchemist →</a>
+        <p>Meet Nita, acrylic alchemist and visual storyweaver.</p>
+      </div>
+      <div class="card">
+        <a href="#gallery">Explore Portfolio →</a>
+        <p>Surreal figures: fracture, bloom, unbowed.</p>
+      </div>
+      <div class="card">
+        <a href="#contact">Get in Touch →</a>
+        <p>Commissions, collabs, deep questions—bring them.</p>
+      </div>
+    </div>
+  </section>
+
   <!-- About -->
-<section id="hero" class="hero">
-  <h1>Welcome to Hippo Artz</h1>
-  <p>“Hippo.Artz is where emotion, dream, and defiance spill across canvas.</p>
-  <div class="cta-row">
-    <a class="btn ghost" href="#about">About the Alchemist</a>
-    <a class="btn" href="#gallery">Explore Portfolio</a>
+  <section id="about" class="section">
+    <h2>Meet the Acrylic Alchemist</h2>
+    <p>Welcome to HIPPO.ARTZ. This site is a novice apothecary of my experimentation with color, texture, and storytelling. I am <strong>Nita</strong> — a <strong>self-taught acrylic painter</strong>, <em>visual storyweaver</em>, and unapologetic blerd. My canvases explore how <strong>emotion</strong> and <strong>identity</strong> take shape through broad strokes, surreal dreamscapes, and a touch of <em>Black Girl Magic</em>.</p>
 
-    <a class="btn" href="#contact">Get in Touch</a>
-  </div>
+    <h3>Behind the Canvas</h3>
+    <blockquote style="text-align:center; font-size:1.25rem; font-style:italic; color:#555;">
+      “I am a pessimist if I am not careful.” — Octavia E. Butler
+    </blockquote>
 
-  <div class="quick-links" style="margin-top:1.25rem;">
-    <div class="card">
-      <a href="#about">About the Alchemist →</a>
-      <p>Meet Nita, acrylic alchemist and visual storyweaver.</p>
+    <p>Every piece I create is layered with <strong>emotion</strong>, lived experience, and a shimmer of <em>Black Girl Magic</em>. Bold, intentional strokes carry my reflections on the people I meet, the state of the world, and the dreams that hover just behind my eyelids. My medium is colorful <strong>acrylic paints</strong> on canvas and unfinished wood.</p>
+
+    <p>My creative journey has been ongoing — nourished and sustained by curiosity and grit. Every brushstroke is an experiment and a chance to grow. If there is a single theme, it’s <em>a feeling</em>. My experience as a <strong>melanin-rich, intelligent, unapologetic, witty woman</strong> drives my work toward struggle, independence, resilience, surreal dreamscapes, and death-positive imagery.</p>
+
+    <p>When I am not painting, I am a Plague Master (aka <strong>public health professional</strong>) and staff to my two cats, Fawn and Goatee. This site is both a portfolio and a playground. Whether you’re here to browse, reflect, or connect, I’m grateful you stopped by. <em>Be well.</em></p>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section">
+    <h2>Current Creative Projects</h2>
+
+    <h3>Unheard Echoes</h3>
+    <p>Chains, crowns, tears — the weight and endurance of Black women. A hand extended to those who stumble; a tribute to those who keep pushing through treachery.</p>
+
+    <h3>Dreamscapes & Nightmares</h3>
+    <p>Without darkness, how would we know the light? Monsters and myth step from the shadows — eerie, surreal, and close to the veil.</p>
+
+    <h3>Queens</h3>
+    <p>Kinky crowns, ebony-rich curves, and rhythm. Beauty, visibility, identity, representation, belonging. We are here.</p>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery" class="section">
+    <h2>Gallery</h2>
+
+    <!-- Theme Shortcuts -->
+    <div class="theme-shortcuts">
+      <div class="card">
+        <a href="#turmoil">Unheard Echoes</a>
+        <p>Chains, crowns, tears — the weight and endurance of Black women.</p>
+      </div>
+      <div class="card">
+        <a href="#dreams">Dreamscapes & Nightmares</a>
+        <p>Monsters and myths pulled from the shadows — surreal and haunting.</p>
+      </div>
+      <div class="card">
+        <a href="#queens">Queens</a>
+        <p>Kinky crowns, rich curves, rhythm and representation.</p>
+      </div>
     </div>
-    <div class="card">
-      <a href="#gallery">Explore Portfolio →</a>
-      <p>Surreal figures: fracture, bloom, unbowed.</p>
 
+    <!-- Actual Gallery Images (your JS will render here) -->
+    <div id="gallery-grid" class="grid gallery"></div>
+  </section>
 
-<section id="about" class="section">
-  <h2>Meet the Acrylic Alchemist</h2>
-  <p>Welcome to HIPPO.ARTZ. This site is a novice apothecary of my experimentation with color, texture, and storytelling. I am <strong>Nita</strong> — a <strong>self-taught acrylic painter</strong>, <em>visual storyweaver</em>, and unapologetic blerd. My canvases explore how <strong>emotion</strong> and <strong>identity</strong> take shape through broad strokes, surreal dreamscapes, and a touch of <em>Black Girl Magic</em>.</p>
-
-  <h3>Behind the Canvas</h3>
-  <blockquote style="text-align:center; font-size:1.25rem; font-style:italic; color:#555;">
-    “I am a pessimist if I am not careful.” — Octavia E. Butler
-  </blockquote>
-
-  <p>Every piece I create is layered with <strong>emotion</strong>, lived experience, and a shimmer of <em>Black Girl Magic</em>. Bold, intentional strokes carry my reflections on the people I meet, the state of the world, and the dreams that hover just behind my eyelids. My medium is colorful <strong>acrylic paints</strong> on canvas and unfinished wood.</p>
-
-  <p>My creative journey has been ongoing — nourished and sustained by curiosity and grit. Every brushstroke is an experiment and a chance to grow. If there is a single theme, it’s <em>a feeling</em>. My experience as a <strong>melanin-rich, intelligent, unapologetic, witty woman</strong> drives my work toward struggle, independence, resilience, surreal dreamscapes, and death-positive imagery.</p>
-
-  <p>When I am not painting, I am a Plague Master (aka <strong>public health professional</strong>) and staff to my two cats, Fawn and Goatee. This site is both a portfolio and a playground. Whether you’re here to browse, reflect, or connect, I’m grateful you stopped by. <em>Be well.</em></p>
-</section>
-<section id="projects" class="section">
-  <h2>Current Creative Projects</h2>
-
-  <h3>Unheard Echoes</h3>
-  <p>Black women worldwide are consigned to carry the burdens of the world, and we do so without complaint. Despite chains that weigh us down, crowns that slip, or tears drying on our cheeks, we endure. These pieces are the shouts of the voiceless: a hand extended to those who stumble, and a tribute to those who keep pushing regardless of the treachery of the journey or its destination.</p>
-
-  <h3>Dreamscapes and Nightmares</h3>
-  <p>Without darkness, how would we know the light? These images drag monsters and myth from the shadows. Eerie and surreal, they straddle the thin veil between nightmare and fable.</p>
-
-  <h3>Queens</h3>
-  <p>Tightly wound kinky coifs, ebony-rich curves, and the rhythm of our roots. These works explore beauty, visibility, identity, representation, and belonging. We are here.</p>
-</section>
-  
-<section id="gallery">
-  <h2>Gallery</h2>
-  <section id="gallery">
-  <h2>Gallery</h2>
-
-  <!-- Theme Shortcuts -->
-  <div class="theme-shortcuts">
-    <div class="card">
-      <a href="#turmoil">Unheard Echoes</a>
-      <p>Chains, crowns, tears — the weight and endurance of Black women.</p>
-    </div>
-    <div class="card">
-      <a href="#dreams">Dreamscapes & Nightmares</a>
-      <p>Monsters and myths pulled from the shadows — surreal and haunting.</p>
-    </div>
-    <div class="card">
-      <a href="#queens">Queens</a>
-      <p>Kinky crowns, rich curves, rhythm and representation. We are here.</p>
+  <!-- Lightbox -->
+  <div id="lightbox" aria-hidden="true">
+    <div class="wrap">
+      <button class="close" aria-label="Close">×</button>
+      <img src="" alt="">
+      <div class="lb-title"></div>
     </div>
   </div>
-
-  <!-- Actual Gallery Images -->
-  <div id="gallery-grid" class="grid gallery">
-    <!-- images will go here, sorted under headings -->
-  </div>
-</section>
-  <div id="gallery-grid" class="grid gallery"></div>
-</section>
-
-<!-- Lightbox (click image to enlarge) -->
-<div id="lightbox">
-  <div class="wrap">
-    <button class="close" aria-label="Close">×</button>
-    <img src="" alt="">
-    <div class="lb-title"></div>
-  </div>
-</div>
-
-<!-- Scripts -->
-<script src="render-gallery.js?v=2"></script>
-
 
   <!-- Exhibitions -->
-  <section id="exhibitions">
+  <section id="exhibitions" class="section">
     <h2>Exhibitions</h2>
     <ul>
       <li>2025 — Open Call Submission (pending), Gallery, Richmond, VA</li>
@@ -120,27 +118,38 @@
     </ul>
   </section>
 
-  <!-- Contact -->
- <!-- Reusable callout box (appears near the bottom of the page) -->
-  <div class="callout" aria-label="Contact callout">
-    <h3>Can’t Get Enough?</h3>
+  <!-- Contact (single, at bottom) -->
+  <section id="contact" class="section">
+    <h2>Get in Touch</h2>
     <p>Call me forth and convey your ideas, pitches for collabs, or those bone-deep inquiries you just cannot shake.</p>
-    <p><a href="mailto:hippo.artz@gmail.com">hippo.artz@gmail.com</a> &nbsp;|&nbsp; <a href="tel:+18043477574">804-347-7574</a></p>
-  </div>
-</section>
-  
-  <div class="social">
-    <!-- Replace # with your real links -->
-    <a href="https://www.amazon.com/hz/wishlist/ls/1KUUML0G178XD?ref_=wl_share" target="_blank" rel="noopener">Amazon Wish List</a>
-    <a href="https://www.tiktok.com/@hippo.artz?_t=ZT-8zaFoODn5yg&_r=1" target="_blank" rel="noopener">TikTok</a>
-    <a href="https://www.facebook.com/share/1CiBRwgVrH/" target="_blank" rel="noopener">Facebook</a>
-    <a href="https://instagram.com/hippo.artz" target="_blank" rel="noopener">Instagram</a>
-  </div>
+    <p><strong>Email:</strong> <a href="mailto:hippo.artz@gmail.com">hippo.artz@gmail.com</a> &nbsp;|&nbsp; <strong>Phone:</strong> <a href="tel:+18043477574">804-347-7574</a></p>
 
- </section>
+    <div class="social">
+      <a href="https://www.amazon.com/hz/wishlist/ls/1KUUML0G178XD?ref_=wl_share" target="_blank" rel="noopener">Amazon Wish List</a>
+      <a href="https://www.tiktok.com/@hippo.artz?_t=ZT-8zaFoODn5yg&_r=1" target="_blank" rel="noopener">TikTok</a>
+      <a href="https://www.facebook.com/share/1CiBRwgVrH/" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://instagram.com/hippo.artz" target="_blank" rel="noopener">Instagram</a>
+    </div>
+
+    <!-- Copyright / Usage -->
+    <section id="rights" class="section" style="padding-top:1rem;">
+      <h2>Copyright & Image Rights</h2>
+      <p>All artwork on this site is original and created by Nita (Hippo Artz). © 2025 Nita. All rights reserved. Unauthorized use, reproduction, or distribution of these images is prohibited and may result in legal action. Licensing, press use, and collaborations are welcome — please <a href="#contact">get in touch</a>.</p>
+    </section>
+
+    <!-- Callout -->
+    <div class="callout" aria-label="Contact callout">
+      <h3>Can’t Get Enough?</h3>
+      <p>The gallery ends here, but the story doesn’t. Write, call, or dream aloud with me.</p>
+      <p><a href="mailto:hippo.artz@gmail.com">hippo.artz@gmail.com</a> &nbsp;|&nbsp; <a href="tel:+18043477574">804-347-7574</a></p>
+    </div>
+  </section>
 
   <footer>
     <p>© 2025 Nita. All rights reserved.</p>
   </footer>
+
+  <!-- Scripts -->
+  <script src="render-gallery.js?v=2"></script>
 </body>
 </html>
