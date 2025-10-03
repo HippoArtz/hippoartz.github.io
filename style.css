@@ -77,10 +77,12 @@ h2 { margin: 0 0 1rem; font-size: 1.5rem; }
 .card .meta .sep { margin: 0 .5ch; }
 .card .desc { margin:.5rem 0 0; line-height:1.35; }
 
-/* --- FINAL FIXES: force the dark theme colors --- */
-header nav a { color: var(--text) !important; }  /* top links readable on dark bg */
+/* FINAL OVERRIDES */
+header nav a { color: var(--text) !important; }
 header nav a:hover { color: var(--accent) !important; }
 
+/* Ensure dark cards, not white */
 .card { background: var(--card) !important; border: 1px solid var(--border) !important; }
-.card .meta { color: var(--muted) !important; } /* no more #555 on dark */
+.card .meta { color: var(--muted) !important; }
 .card .desc { color: #d3d8e3 !important; }
+
