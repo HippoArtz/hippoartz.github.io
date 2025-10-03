@@ -32,3 +32,13 @@
   font-size: 0.9rem;
   color: #444;
 }
+
+
+.card .title { display:block; font-weight:700; margin: 0 0 4px; font-size: 1rem; }
+.card .meta { color:#555; font-size:.92rem; margin-top:2px; }
+.card .meta .sep { margin: 0 .5ch; }
+.card .desc { margin:.5rem 0 0; line-height:1.35; }
+
+
+header a { color:#111; }
+header a:hover { text-decoration: underline; }
