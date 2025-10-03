@@ -27,11 +27,11 @@
     "alt": "tbd",
     "blurb": "tbd",
     "price": "tbd",
-    "medium": "acrylic paint on canvas"
+    "medium": "acrylic marker on paper"
   },
   {
-    "filename": "batchata.jpg",
-    "image": "Resize1/batchata.jpg",
+    "filename": "bachata.jpg",
+    "image": "Resize1/bachata.jpg",
     "title": "",
     "size": "16x20in",
     "alt": "tbd",
@@ -140,8 +140,18 @@
     "medium": "acrylic paint on canvas"
   },
   {
-    "filename": "dragon.jpg",
-    "image": "Resize1/dragon.jpg",
+    "filename": "dragonswallow.jpg",
+    "image": "Resize1/dragonswallow.jpg",
+    "title": "",
+    "size": "16x20in",
+    "alt": "tbd",
+    "blurb": "tbd",
+    "price": "ON LOAN",
+    "medium": "acrylic paint on canvas"
+  },
+    {
+    "filename": "dragontouch.jpg",
+    "image": "Resize1/dragontouch.jpg",
     "title": "",
     "size": "-",
     "alt": "tbd",
@@ -162,7 +172,7 @@
   {
     "filename": "eyebody.jpg",
     "image": "Resize1/eyebody.jpg",
-    "title": "Sketch",
+    "title": "Eyebody Sketch",
     "size": "sketch on paper",
     "alt": "tbd",
     "blurb": "tbd",
@@ -182,6 +192,16 @@
   {
     "filename": "eyegreen.jpg",
     "image": "Resize1/eyegreen.jpg",
+    "title": "Sketch",
+    "size": "sketch on paper",
+    "alt": "tbd",
+    "blurb": "tbd",
+    "price": "tbd",
+    "medium": "acrylic markers on paper"
+  },
+    {
+    "filename": "eyes.jpg",
+    "image": "Resize1/eyes.jpg",
     "title": "Sketch",
     "size": "sketch on paper",
     "alt": "tbd",
@@ -350,14 +370,14 @@
     "medium": "acrylic paint on canvas"
   },
   {
-    "filename": "mouthtentacle.jpg",
-    "image": "Resize1/mouthtentacle.jpg",
+    "filename": "mouthtentacles.jpg",
+    "image": "Resize1/mouthtentacles.jpg",
     "title": "Sketch",
     "size": "sketch on paper",
     "alt": "tbd",
     "blurb": "tbd",
     "price": "tbd",
-    "medium": "acrylic paint on canvas"
+    "medium": "acrylic marker on paper"
   },
   {
     "filename": "octopuseye.jpg",
@@ -367,7 +387,7 @@
     "alt": "tbd",
     "blurb": "tbd",
     "price": "tbd",
-    "medium": "acrylic paint on canvas"
+    "medium": "acrylic marker on canvas"
   },
   {
     "filename": "pimplepop.jpg",
