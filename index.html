@@ -1,27 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nita | Hippo Artz</title>
-  <link rel="stylesheet" href="style.css?v=2">
-  <link rel="stylesheet" href="lightbox.css?v=4">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hippo.Artz | Hippo Artz</title>
+
+  <!-- Your styles + lightbox CSS -->
+  <link rel="stylesheet" href="style.css?v=2" />
+  <link rel="stylesheet" href="lightbox.css?v=4" />
 
   <style>
-    /* Responsive tweaks for logo & about photo */
-    header img.logo {
-      height: 60px;
-      vertical-align: middle;
+    /* Layout tweaks for header/footer logos (translucent-safe) */
+    .logo-wrap {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 10px 0;
     }
+    .logo-wrap img {
+      height: 60px; /* adjust as desired */
+      display: block;
+      /* If translucency makes it hard to read on your background,
+         uncomment the next two lines: */
+      /* background: rgba(255,255,255,0.7);
+         border-radius: 8px; */
+    }
+    header nav a { margin-right: 16px; }
 
+    /* About photo responsive */
     #about img.artist-photo {
       max-width: 300px;
       border-radius: 12px;
       float: right;
       margin: 0 0 1rem 1rem;
     }
+    /* Optional second about image (centered) */
+    #about img.artist-photo-2 {
+      max-width: 420px;
+      border-radius: 12px;
+      display: block;
+      margin: 1rem auto;
+    }
 
-    /* On small screens (phones), remove float and center the photo */
+    /* Full-width section images (Recent Show) */
+    .fullbleed {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      display: block;
+    }
+
+    footer {
+      margin-top: 3rem;
+      padding: 1.5rem 0;
+      border-top: 1px solid #e5e7eb;
+    }
+
+    /* Mobile tweaks */
     @media (max-width: 768px) {
       #about img.artist-photo {
         float: none;
@@ -29,49 +65,51 @@
         margin: 1rem auto;
         max-width: 90%;
       }
+      .logo-wrap img { height: 50px; }
     }
   </style>
 </head>
 
 <body>
-  <!-- Header / Nav -->
+  <!-- Header / Nav with logo at the top -->
   <header>
-    <!-- 👇 Replace logo.png with your actual logo file -->
-    <img src="logo.png" alt="Hippo Artz Logo" class="logo">
-    <nav>
-      <a href="#about">About</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#exhibitions">Exhibitions</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <div class="logo-wrap">
+      <img src="hippoartzlogo.jpg" alt="Hippo.Artz logo">
+      <nav>
+        <a href="#about">About</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#recent-show">Recent Show</a>
+        <a href="#exhibitions">Exhibitions</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
-<section id="about">
-  <h2>About</h2>
-  <img src="nita-with-art.jpg" alt="Nita standing with her artwork" class="artist-photo">
-  <p>I paint women suspended in surreal landscapes, their bodies reshaped by violence and survival. 
-  My work sits in the tension between oppression and defiance...</p>
+  <!-- About -->
+  <section id="about">
+    <h2>About</h2>
+    <!-- About image (Hippo.Artz with Mother Earth) -->
+    <img src="me1.jpg" alt="Hippo.Artz with 'Mother Earth' artwork" class="artist-photo">
+    <p>Hippo.Artz paints figures suspended in surreal landscapes—bodies reshaped by violence, survival, and reclamation. 
+       The work sits in the tension between oppression and defiance, inviting viewers to look longer than comfort allows.</p>
 
-  <!-- Extra image in About -->
-  <img src="about-extra.jpg" alt="Nita in her studio" 
-       style="max-width:400px; border-radius:12px; display:block; margin:1rem auto;">
-</section>
+    <!-- Optional second About image (studio). Uncomment if you want it visible now.
+    <img src="mestudio.jpg" alt="Hippo.Artz in studio" class="artist-photo-2">
+    -->
+  </section>
 
-  
-  <!-- Gallery -->
+  <!-- Gallery (auto-rendered from gallery.json) -->
   <section id="gallery">
     <h2>Gallery</h2>
-    <!-- Gallery content will be injected here by render-gallery.js -->
+    <!-- Tiles will be injected by render-gallery.js -->
   </section>
-  
-<!-- Recent Show -->
-<section id="recent-show">
-  <h2>Recent Show</h2>
-  <img src="recent-show.jpg" alt="Nita showcasing her art at a recent exhibition"
-       style="max-width:100%; border-radius:12px; margin:1rem 0;">
-  <p>One of my recent exhibitions where I showcased several pieces from my collections. 
-  It was an amazing experience to see my work in conversation with the audience.</p>
-</section>
+
+  <!-- Recent Show (the exhibition photo) -->
+  <section id="recent-show">
+    <h2>Recent Show</h2>
+    <img src="me-artspace.jpg" alt="Hippo.Artz showcasing artwork at a recent exhibition" class="fullbleed">
+    <p>A snapshot from a recent exhibition—work from multiple series in conversation with the audience.</p>
+  </section>
 
   <!-- Exhibitions -->
   <section id="exhibitions">
@@ -82,10 +120,17 @@
   <!-- Contact -->
   <section id="contact">
     <h2>Contact</h2>
-    <p>Email: <a href="mailto:hippoartz@example.com">hippoartz@example.com</a></p>
+    <p>Email: <a href="mailto:hippo.artz@gmail.com">hippo,artz@gmail.com</a></p>
   </section>
 
-  <!-- Scripts at the end so they load after the page -->
+  <!-- Footer with logo at the bottom -->
+  <footer>
+    <div class="logo-wrap" style="justify-content:center;">
+      <img src="hippoartzlogo.jpg" alt="Hippo.Artz logo">
+    </div>
+  </footer>
+
+  <!-- Scripts at the end -->
   <script src="lightbox.js?v=4" defer></script>
   <script src="render-gallery.js?v=4" defer></script>
 </body>
