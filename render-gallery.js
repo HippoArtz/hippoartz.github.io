@@ -1,71 +1,79 @@
 
-async function renderGallery(jsonPath = 'gallery.json') {
-  const grid = document.getElementById('gallery-grid');
-  if (!grid) return;
-  const res = await fetch(jsonPath);
-  const items = await res.json();
-  grid.innerHTML = items.map(it => `
-    <figure class="card">
-      <a href="${it.image}" class="zoom" data-title="${escapeHtml(it.title || '')}">
-        <img src="${it.image}" alt="${escapeHtml(it.alt || '')}" loading="lazy">
-      </a>
-      <figcaption>
-        <strong class="title">${escapeHtml(it.title || '')}</strong>
-        <div class="meta">
-          ${it.size ? `<span class="size">${escapeHtml(it.size)}</span>` : ''}
-          ${it.medium ? `<span class="sep">•</span><span class="medium">${escapeHtml(it.medium)}</span>` : ''}
-          ${it.price ? `<span class="sep">•</span><span class="price">${escapeHtml(it.price)}</span>` : ''}
-        </div>
-        ${it.blurb ? `<p class="desc">${escapeHtml(it.blurb)}</p>` : ''}
-      </figcaption>
-    </figure>
-  `).join('');
+// Render gallery by sections and hook up lightbox
+(async function(){
+  const res = await fetch('gallery.json?v=' + Date.now());
+  const data = await res.json();
+  const container = document.querySelector('#gallery');
+  if(!container) return;
 
-  // Wire up lightbox
-  setupLightbox();
-}
+  const sections = data.sections || [];
+  const items = data.items || [];
 
-function setupLightbox() {
-  const overlay = document.getElementById('lightbox');
-  const overlayImg = overlay.querySelector('img');
-  const overlayTitle = overlay.querySelector('.lb-title');
-  const closeBtn = overlay.querySelector('.close');
-
-  function open(src, title="") {
-    overlayImg.src = src;
-    overlayTitle.textContent = title || '';
-    overlay.classList.add('open');
-    document.body.style.overflow = 'hidden';
-  }
-  function close() {
-    overlay.classList.remove('open');
-    overlayImg.src = '';
-    document.body.style.overflow = '';
-  }
-
-  document.body.addEventListener('click', (e) => {
-    const a = e.target.closest('a.zoom');
-    if (a) {
-      e.preventDefault();
-      open(a.href, a.getAttribute('data-title') || '');
-    }
-    if (e.target.classList.contains('close') || e.target.id === 'lightbox') {
-      close();
-    }
+  // Group items by section (preserve order in sheet)
+  const bySection = {};
+  items.forEach(it => {
+    const sec = it.section && it.section.trim() ? it.section.trim() : 'Unsorted';
+    if(!bySection[sec]) bySection[sec] = [];
+    bySection[sec].push(it);
   });
 
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && overlay.classList.contains('open')) close();
+  // Order: use provided sections first, then any extras
+  const sectionOrder = [...sections];
+  Object.keys(bySection).forEach(s => { if(!sectionOrder.includes(s)) sectionOrder.push(s); });
+
+  container.innerHTML = '';
+  sectionOrder.forEach(section => {
+    const group = bySection[section];
+    if(!group || !group.length) return;
+
+    const h2 = document.createElement('h3');
+    h2.textContent = section;
+    container.appendChild(h2);
+
+    const grid = document.createElement('div');
+    grid.className = 'grid';
+    grid.style.display = 'grid';
+    grid.style.gridTemplateColumns = 'repeat(auto-fill, minmax(220px, 1fr))';
+    grid.style.gap = '16px';
+
+    group.forEach(it => {
+      const card = document.createElement('a');
+      card.href = it.src || it.thumb || '#';
+      card.className = 'art-card';
+      card.style.display = 'block';
+      card.style.background = 'var(--card, #fff)';
+      card.style.border = '1px solid var(--border, #e5e7eb)';
+      card.style.borderRadius = '16px';
+      card.style.boxShadow = '0 6px 20px rgba(0,0,0,0.06)';
+      card.style.overflow = 'hidden';
+      card.style.textDecoration = 'none';
+      card.style.color = 'inherit';
+      card.setAttribute('data-id', it.id);
+
+      const img = document.createElement('img');
+      img.loading = 'lazy';
+      img.alt = it.alt || it.title || '';
+      img.src = it.thumb || it.src || '';
+      img.style.width = '100%';
+      img.style.height = '220px';
+      img.style.objectFit = 'cover';
+      card.appendChild(img);
+
+      const meta = document.createElement('div');
+      meta.style.padding = '12px 14px';
+      meta.innerHTML = `
+        <div style="font-weight:600">${it.title || 'Untitled'}</div>
+        <div style="opacity:.7; font-size:.9rem">${[it.medium, it.size, it.year].filter(Boolean).join(' • ')}</div>
+      `;
+      card.appendChild(meta);
+
+      grid.appendChild(card);
+    });
+
+    container.appendChild(grid);
+
+    // Bind lightbox to links in this grid
+    const nodes = grid.querySelectorAll('a.art-card');
+    window.HippoLightbox && window.HippoLightbox.bind(nodes, group);
   });
-}
-
-function escapeHtml(str) {
-  return String(str)
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&#39;');
-}
-
-document.addEventListener('DOMContentLoaded', () => renderGallery());
+})();
