@@ -125,3 +125,29 @@ figure {
 }
 figcaption { margin-top: 8px; font-size: 0.9em; color: var(--text); }
 .blurb { font-style: italic; color: var(--muted); margin-top: 4px; }
+
+/* === GALLERY SAFETY OVERRIDES === */
+#gallery img {
+  max-width: 100%;
+  height: auto;
+  display: block;         /* kills inline gaps */
+  object-fit: contain;    /* never crop art */
+}
+
+/* Figures behave like cards, but stack cleanly */
+#gallery figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Grid: responsive, no overlap */
+#gallery .grid.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  align-items: start;      /* captions don’t force weird alignment */
+}
+
+/* Long captions don't break layout */
+#gallery figcaption { word-break: break-word; }
