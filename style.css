@@ -1,88 +1,34 @@
-/* Basic reset & typography */
-* { box-sizing: border-box; }
-body {
-  margin: 0;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-  color: #121212;
-  background: #ffffff;
-  line-height: 1.6;
-}
-
-/* Header */
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: #000;
-  color: #fff;
-  padding: 0.75rem 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.site-header .brand {
-  font-weight: 700;
-  letter-spacing: 0.5px;
-}
-.site-header .site-nav a {
-  color: #fff;
-  text-decoration: none;
-  margin-left: 1rem;
-}
-.site-header .site-nav a:hover { text-decoration: underline; }
-
-/* Hero */
-.hero {
-  padding: 6rem 1.25rem 3rem;
-  text-align: center;
-  background: #f5f7fb;
-}
-.hero h1 {
-  margin: 0 0 0.5rem;
-  font-size: clamp(1.8rem, 3.5vw, 3rem);
-}
-.hero p {
-  margin: 0.25rem 0 1.25rem;
-  color: #333;
-}
-.cta-row { display: inline-flex; gap: 0.75rem; }
-.btn {
-  display: inline-block;
-  padding: 0.65rem 1rem;
-  border-radius: 8px;
-  background: #0d6efd;
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-}
-.btn.ghost {
-  background: #ffffff;
-  color: #0d6efd;
-  border: 2px solid #0d6efd;
-}
-
-/* Sections */
-.section { padding: 2rem 1rem; max-width: 1100px; margin: 0 auto; }
-.section h2 { margin-top: 0; font-size: clamp(1.4rem, 2.2vw, 2rem); }
-
-/* Gallery grid */
-.grid {
+.grid.gallery {
   display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-}
-figure { margin: 0; border: 1px solid #e6e6e6; border-radius: 10px; overflow: hidden; background:#fff; }
-figure img { width: 100%; display: block; }
-figcaption { padding: 0.75rem 0.9rem; }
-figcaption .blurb { color:#444; font-size:0.95rem; margin-top: 0.35rem; }
-
-/* Footer */
-.footer {
-  padding: 1.25rem;
-  text-align: center;
-  background: #fafafa;
-  border-top: 1px solid #eee;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
 }
 
-/* Accessibility helpers */
-a:focus, button:focus { outline: 3px solid #0d6efd55; outline-offset: 2px; }
+.card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0,0,0,.08);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card figcaption {
+  padding: 8px 12px 12px;
+}
+
+.card figcaption h3 {
+  margin: 0 0 4px;
+  font-size: 1rem;
+}
+
+.card figcaption p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #444;
+}
