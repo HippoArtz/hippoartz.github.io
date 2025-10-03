@@ -68,40 +68,7 @@ h2 { margin: 0 0 1rem; font-size: 1.5rem; }
 /* Improve About/Contact readability on dark bg */
 #about p, #contact p, #exhibitions li { color:#cfd6e4; }
 
-.grid.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 16px;
-}
 
-.card {
-  background: #fff;
-  border: 1px solid #eee;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 1px 3px rgba(0,0,0,.08);
-}
-
-.card img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.card figcaption {
-  padding: 8px 12px 12px;
-}
-
-.card figcaption h3 {
-  margin: 0 0 4px;
-  font-size: 1rem;
-}
-
-.card figcaption p {
-  margin: 0;
-  font-size: 0.9rem;
-  color: #444;
-}
 
 .card img { aspect-ratio: 4 / 5; object-fit: cover; }
 
@@ -110,6 +77,3 @@ h2 { margin: 0 0 1rem; font-size: 1.5rem; }
 .card .meta .sep { margin: 0 .5ch; }
 .card .desc { margin:.5rem 0 0; line-height:1.35; }
 
-
-header a { color:#111; }
-header a:hover { text-decoration: underline; }
