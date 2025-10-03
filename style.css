@@ -8,6 +8,8 @@
 }
 
 html, body { height: 100%; }
+:target { scroll-margin-top: 72px; }
+.card img { aspect-ratio: 4 / 5; object-fit: cover; }
 
 body {
   margin: 0;
