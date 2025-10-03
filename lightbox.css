@@ -1,3 +1,164 @@
+/* ---------- Light Theme (default) ---------- */
+:root {
+  --bg: #f5f0fa;      /* soft lavender */
+  --text: #222;       
+  --muted: #555;      
+  --accent: #6c4eb6;  /* violet highlight */
+  --accent-light: #ede3f7;
+  --card: #fff;       
+  --border: #ccc;
+}
+
+/* ---------- Dark Theme (when .dark is on body) ---------- */
+body.dark {
+  --bg: #0f1115;
+  --text: #e9edf3;
+  --muted: #a7b0c3;
+  --accent: #7dd3fc;
+  --accent-light: #232836;
+  --card: #161a20;
+  --border: #232836;
+}
+
+/* ---------- General Page Styles ---------- */
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: sans-serif;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Header + Footer */
+header, footer {
+  background: #3c2a4d;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+header h1 { margin:0; font-size:1.15rem; letter-spacing:.5px; }
+nav a { margin-left: 1rem; text-decoration: none; color: #fff; }
+nav a:hover { color: var(--accent-light); }
+
+/* Theme Toggle Button */
+#theme-toggle {
+  margin-left: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #fff;
+}
+#theme-toggle:hover { opacity: 0.8; }
+
+/* Buttons */
+.btn {
+  background: var(--accent);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+}
+.btn.ghost {
+  border: 2px solid var(--accent);
+  background: transparent;
+  color: var(--accent);
+}
+
+/* Section Titles */
+h2, h3 {
+  color: var(--accent);
+  margin-top: 2em;
+  text-align: center;
+}
+
+/* Sections */
+section { padding: 2rem 1.25rem; }
+
+/* Gallery Grid */
+.grid.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  margin: 20px 0;
+}
+
+/* Figures */
+figure {
+  background: var(--card);
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+figcaption { margin-top: 8px; font-size: 0.9em; color: var(--text); }
+.blurb { font-style: italic; color: var(--muted); margin-top: 4px; }
+
+/* GALLERY SAFETY OVERRIDES */
+#gallery img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+#gallery figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+#gallery .grid.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  align-items: start;
+}
+#gallery figcaption { word-break: break-word; }
+
+/* Theme Shortcuts */
+.theme-shortcuts {
+  display: flex;
+  gap: 1rem;
+  margin: 1.5rem 0;
+  flex-wrap: wrap;
+}
+.theme-shortcuts .card {
+  flex: 1 1 30%;
+  background: var(--bg);
+  border: 2px solid var(--accent);
+  padding: 1rem;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+.theme-shortcuts .card:hover {
+  transform: scale(1.05);
+  background: var(--accent-light);
+}
+.theme-shortcuts a {
+  display: block;
+  font-weight: bold;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+  text-decoration: none;
+}
+.theme-shortcuts p { font-size: 0.9rem; color: var(--muted); }
+
+/* Social links (fixes the “all one hyperlink” bug) */
+.social {
+  margin-top: .75rem;
+  display: flex;
+  gap: .75rem;
+  flex-wrap: wrap;
+}
+.social a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px dotted transparent;
+}
+.social a:hover { border-color: var(--accent); }
 
 /* Lightbox overlay */
 #lightbox {
@@ -13,10 +174,12 @@
   border-radius: 12px; padding: 10px; box-shadow: 0 10px 30px rgba(0,0,0,.5);
 }
 #lightbox img {
-  display:block; max-width: 90vw; max-height: 75vh; width:auto; height:auto; margin: 0 auto;
+  display:block; max-width: 90vw; max-height: 75vh;
+  width:auto; height:auto; margin: 0 auto;
 }
 #lightbox .lb-title {
-  color: var(--text, #eee); font-size: .95rem; margin-top: 8px; text-align: center;
+  color: var(--text, #eee); font-size: .95rem;
+  margin-top: 8px; text-align: center;
 }
 #lightbox .close {
   position: absolute; top: 6px; right: 8px;
