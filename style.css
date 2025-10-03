@@ -1,3 +1,73 @@
+:root {
+  --bg: #0f1115;         /* page background */
+  --text: #e9edf3;       /* body text */
+  --muted: #a7b0c3;      /* secondary text */
+  --card: #161a20;       /* card background */
+  --border: #232836;     /* card border */
+  --accent: #7dd3fc;     /* links / highlight */
+}
+
+html, body { height: 100%; }
+
+body {
+  margin: 0;
+  color: var(--text);
+  background:
+    radial-gradient(1200px 600px at 10% -20%, rgba(125,211,252,0.06), transparent 60%),
+    radial-gradient(1000px 500px at 90% 120%, rgba(244,114,182,0.05), transparent 60%),
+    linear-gradient(180deg, #0c0f14 0%, var(--bg) 100%);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+a { color: var(--accent); }
+
+header {
+  display:flex; align-items:center; justify-content:space-between;
+  padding: 1rem 1.25rem; border-bottom: 1px solid rgba(255,255,255,.08);
+  position: sticky; top: 0; backdrop-filter: blur(6px);
+  background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,0));
+  z-index: 10;
+}
+header h1 { margin:0; font-size:1.15rem; letter-spacing:.5px; }
+nav a { margin-left: 1rem; text-decoration:none; }
+nav a:hover { text-decoration:underline; }
+
+/* Sections */
+section { padding: 2rem 1.25rem; }
+h2 { margin: 0 0 1rem; font-size: 1.5rem; }
+
+/* Your existing grid & card rules, adapted to theme */
+.grid.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0,0,0,.25);
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+.card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(125,211,252,.4);
+  box-shadow: 0 10px 24px rgba(0,0,0,.35);
+}
+
+.card img { width: 100%; height: auto; display: block; }
+
+.card figcaption { padding: 10px 12px 14px; }
+.card .title { display:block; font-weight:700; margin:0 0 4px; font-size:1rem; }
+.card .meta { color: var(--muted); font-size:.92rem; margin-top:2px; }
+.card .meta .sep { margin: 0 .5ch; }
+.card .desc { margin:.5rem 0 0; line-height:1.4; color:#d3d8e3; }
+
+/* Improve About/Contact readability on dark bg */
+#about p, #contact p, #exhibitions li { color:#cfd6e4; }
+
 .grid.gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -33,6 +103,7 @@
   color: #444;
 }
 
+.card img { aspect-ratio: 4 / 5; object-fit: cover; }
 
 .card .title { display:block; font-weight:700; margin: 0 0 4px; font-size: 1rem; }
 .card .meta { color:#555; font-size:.92rem; margin-top:2px; }
