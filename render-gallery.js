@@ -61,10 +61,16 @@
 
       const meta = document.createElement('div');
       meta.style.padding = '12px 14px';
-      meta.innerHTML = `
-        <div style="font-weight:600">${it.title || 'Untitled'}</div>
-        <div style="opacity:.7; font-size:.9rem">${[it.medium, it.size, it.year].filter(Boolean).join(' • ')}</div>
-      `;
+   meta.innerHTML = `
+  <div style="font-weight:600">${it.title || 'Untitled'}</div>
+  <div style="opacity:.7; font-size:.9rem">
+    ${[it.medium, it.size, it.year].filter(Boolean).join(' • ')}
+  </div>
+  <div style="margin-top:4px; font-size:.9rem; color:#374151;">
+    ${it.price || 'Available on request'}
+  </div>
+`;
+
       card.appendChild(meta);
 
       grid.appendChild(card);
