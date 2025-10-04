@@ -20,10 +20,43 @@
     .logo-wrap img {
       height: 60px;
       display: block;
-      /* If translucency makes it hard to see on your background, uncomment:
-      background: rgba(255,255,255,0.7);
-      border-radius: 8px;
-      */
+<style>
+  /* Make header lighter on small screens */
+  @media (max-width: 768px) {
+    .logo-wrap { padding: 6px 8px !important; }
+    .logo-wrap img { height: 40px !important; }
+    header nav a { margin-right: 10px !important; font-size: .95rem; }
+  }
+
+  /* Optional: if your header is "frozen"/sticky and too tall, un-stick it */
+  /* header { position: static !important; } */
+
+  /* Slim sticky theme bar */
+  .theme-bar {
+    position: sticky;
+    top: 0;                 /* if your header is sticky, change to top: 56px */
+    z-index: 900;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    padding: 6px 8px;
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .theme-bar::-webkit-scrollbar { display: none; }
+
+  .theme-bar .pill {
+    white-space: nowrap;
+    padding: 6px 10px;
+    border: 1px solid #e5e7eb;
+    border-radius: 999px;
+    background: #fafafa;
+    font-size: .9rem;
+    cursor: pointer;
+  }
+  .theme-bar .pill:active { transform: translateY(1px); }
+</style>
     }
     header nav a { margin-right: 16px; }
 
@@ -82,16 +115,14 @@
     </nav>
   </div>
 
-  <!-- Theme Shortcuts (navigation to gallery sections) -->
-  <div class="theme-shortcuts" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:8px; margin:.5rem 0 1rem;">
-    <!-- You can show separate buttons for Dreamscapes and Nightmares; both will jump to the combined section -->
-    <button data-goto="Queens">Queens</button>
-    <button data-goto="Dreamscapes">Dreamscapes</button>
-    <button data-goto="Nightmares">Nightmares</button>
-    <button data-goto="Unheard Echoes">Unheard Echoes</button>
-    <button data-goto="In Memory of">In Memory of</button>
-  </div>
-</header>
+<!-- Slim sticky theme bar (sits above the gallery) -->
+<div class="theme-bar">
+  <button class="pill" data-goto="Queens">Queens</button>
+  <button class="pill" data-goto="Dreamscapes">Dreamscapes</button>
+  <button class="pill" data-goto="Nightmares">Nightmares</button>
+  <button class="pill" data-goto="Unheard Echoes">Unheard Echoes</button>
+  <button class="pill" data-goto="In Memory of">In Memory of</button>
+</div>
 
 
   <!-- Hero -->
@@ -147,11 +178,12 @@
   <!-- Projects -->
   <section id="projects" class="section">
     <h2>Current Project Themes</h2>
-        <p>Click button below to access each.</p>
-    <h3>Queens</h3>
-    <h3>Dreamscapes & Nightmares</h3>
-    <h3>Unheard Echos</h3>
-    <h3>In Memory Of</h3>
+    My pieces tend to fall between these common themes
+    <p>Queens</p>
+    <p>Dreamscapes</p> 
+      <p>& Nightmares</p>
+    <p>Unheard Echos</p>
+    <p>In Memory Of</p>
     
  <!-- Gallery -->
 <section id="gallery" class="section">
@@ -206,6 +238,43 @@
     <p style="text-align:center; opacity:.7;">© 2025 Hippo.Artz. All rights reserved.</p>
   </footer>
 
+  <script src="lightbox.js?v=7" defer></script>
+<script src="render-gallery.js?v=7" defer></script>
+<script>
+  const ALIAS = {
+    "queens": "Queens",
+    "dreamscapes": "Dreamscapes and Nightmares",
+    "nightmares": "Dreamscapes and Nightmares",
+    "unheard echoes": "Unheard Echoes",
+    "unheard echos": "Unheard Echoes",
+    "in memory of": "In Memory of",
+    "in living memory": "In Memory of"
+  };
+  function slugify(t){ return String(t).toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,''); }
+  function resolveSection(label){ const k = String(label||"").trim().toLowerCase(); return ALIAS[k] || label; }
+
+  function wireThemeNav(){
+    document.querySelectorAll('.theme-bar button, .theme-shortcuts button, #projects .jump').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const raw = btn.getAttribute('data-goto') || btn.textContent;
+        const target = resolveSection(raw);
+        const id = 'sec-' + slugify(target);
+        const el = document.getElementById(id);
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    let tries = 0;
+    const t = setInterval(() => {
+      if (document.querySelector('#gallery h3')) { clearInterval(t); wireThemeNav(); }
+      if (++tries > 30) clearInterval(t);
+    }, 200);
+  });
+</script>
+
+  
   <!-- Scripts: load AFTER the page -->
   <script src="lightbox.js?v=7" defer></script>
   <script src="render-gallery.js?v=7" defer></script>
