@@ -69,28 +69,30 @@
   </style>
 </head>
 
-<body>
-  <!-- Header / Nav -->
-  <header>
-    <div class="logo-wrap">
-      <img src="hippoartzlogo.jpg" alt="Hippo.Artz logo">
-      <nav>
-        <a href="#about">About</a>
-        <a href="#gallery">Gallery</a>
-            <!-- Theme Shortcuts (buttons that jump to the rendered sections) -->
-    <div class="theme-shortcuts" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:12px; margin-bottom:1rem;">
-            <button data-goto="Queens">Queens</button>
-            <button data-goto="Dreamscapes">Dreamscapes</button>
-            <button data-goto="In Memory of">In Memory of</button>
-            <button data-goto="Nightmares">Nightmares</button>
-            <button data-goto="Unheard Echos">Unheard Echesos</button>
-    </div>
-        <a href="#recent-show">Recent Show</a>
-        <a href="#exhibitions">Exhibitions</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
+<!-- Header / Nav -->
+<header>
+  <div class="logo-wrap">
+    <img src="hippoartzlogo.jpg" alt="Hippo.Artz logo">
+    <nav>
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#recent-show">Recent Show</a>
+      <a href="#exhibitions">Exhibitions</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+
+  <!-- Theme Shortcuts (navigation to gallery sections) -->
+  <div class="theme-shortcuts" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:8px; margin:.5rem 0 1rem;">
+    <!-- You can show separate buttons for Dreamscapes and Nightmares; both will jump to the combined section -->
+    <button data-goto="Queens">Queens</button>
+    <button data-goto="Dreamscapes">Dreamscapes</button>
+    <button data-goto="Nightmares">Nightmares</button>
+    <button data-goto="Unheard Echoes">Unheard Echoes</button>
+    <button data-goto="In Memory of">In Memory of</button>
+  </div>
+</header>
+
 
   <!-- Hero -->
   <section id="hero" class="hero">
