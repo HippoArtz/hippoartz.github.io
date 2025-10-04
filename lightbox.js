@@ -1,6 +1,6 @@
-
-// Minimalist Lightbox (no dependencies)
+// HippoLightbox v2 — per-section safe binding (no deps)
 (function(){
+  // Overlay markup
   const overlay = document.createElement('div');
   overlay.className = 'hlbx-overlay';
   overlay.innerHTML = `
@@ -13,28 +13,31 @@
   `;
   document.body.appendChild(overlay);
 
-  const imgEl = overlay.querySelector('img');
-  const btnClose = overlay.querySelector('.hlbx-close');
+  const imgEl   = overlay.querySelector('img');
+  const btnClose= overlay.querySelector('.hlbx-close');
   const btnPrev = overlay.querySelector('.hlbx-prev');
   const btnNext = overlay.querySelector('.hlbx-next');
 
-  let items = [];
-  let idx = 0;
+  // Current "session" (the section you clicked in)
+  let sources = [];   // array of full image URLs for THIS section
+  let titles  = [];   // matching titles/alts
+  let idx     = 0;
 
-  function open(i) {
+  function show(i){
     idx = i;
-    const it = items[idx];
-    imgEl.src = it.src || it.thumb || '';
-    imgEl.alt = it.alt || it.title || '';
+    const src = sources[idx] || '';
+    const alt = titles[idx]  || 'Untitled';
+    imgEl.src = src;
+    imgEl.alt = alt;
     overlay.classList.add('open');
   }
-  function close(){ overlay.classList.remove('open'); }
-  function prev(){ if (items.length) open((idx - 1 + items.length) % items.length); }
-  function next(){ if (items.length) open((idx + 1) % items.length); }
+  function close(){ overlay.classList.remove('open'); imgEl.src = ''; }
+  function prev(){ if (sources.length) show((idx - 1 + sources.length) % sources.length); }
+  function next(){ if (sources.length) show((idx + 1) % sources.length); }
 
   btnClose.addEventListener('click', close);
-  btnPrev.addEventListener('click', prev);
-  btnNext.addEventListener('click', next);
+  btnPrev .addEventListener('click', prev);
+  btnNext .addEventListener('click', next);
   overlay.addEventListener('click', (e)=>{ if(e.target === overlay) close(); });
   document.addEventListener('keydown', (e)=>{
     if(!overlay.classList.contains('open')) return;
@@ -43,14 +46,34 @@
     if(e.key === 'ArrowRight') next();
   });
 
-  // Public API
+  // Helpers to read the URL/title from a card
+  function nodeSrc(node){
+    return node.dataset.lbSrc
+        || node.getAttribute('href')
+        || (node.querySelector('img') && node.querySelector('img').src)
+        || '';
+  }
+  function nodeTitle(node){
+    return node.dataset.lbTitle
+        || node.getAttribute('data-title')
+        || (node.querySelector('img') && node.querySelector('img').alt)
+        || 'Untitled';
+  }
+
+  // Public API — binds PER SECTION and keeps a local list for those nodes
   window.HippoLightbox = {
-    bind: function(nodeList, data) {
-      items = data;
-      Array.from(nodeList).forEach((node, i)=>{
-        node.addEventListener('click', (e)=>{
+    bind(nodeList /*, dataIgnored */) {
+      const nodes = Array.from(nodeList);
+      const localSources = nodes.map(nodeSrc);
+      const localTitles  = nodes.map(nodeTitle);
+
+      nodes.forEach((node, i) => {
+        node.addEventListener('click', (e) => {
           e.preventDefault();
-          open(i);
+          // Switch the "session" to THIS section’s images
+          sources = localSources;
+          titles  = localTitles;
+          show(i);
         });
       });
     }
