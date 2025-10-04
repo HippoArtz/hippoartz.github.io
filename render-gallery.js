@@ -52,7 +52,7 @@
   // ---- Utils ----
   function slugify(txt){ return String(txt).toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,''); }
 
-  // Always fetch from the site ROOT (since gallery.json is next to index.html)
+  // Always fetch from the site ROOT (gallery.json is next to index.html)
   async function loadRootJSON(file) {
     const url = `/${file}?ts=${Date.now()}`; // cache-bust
     const res = await fetch(url, { cache: "no-store" });
@@ -60,7 +60,7 @@
     return res.json();
   }
 
-  // Lightbox binder — uses HippoLightbox v2 if present; no-op otherwise
+  // Lightbox binder — uses HippoLightbox v2 if present
   function bindLightbox(grid, group) {
     const nodes = grid.querySelectorAll("a.art-card");
     if (window.HippoLightbox && typeof window.HippoLightbox.bind === "function") {
@@ -83,7 +83,7 @@
       (bySection[sec] ||= []).push(it);
     });
 
-    // Build render order (declared sections first, then any extras)
+    // Build render order (declared sections first, then extras)
     const order = [...allowedOrder];
     Object.keys(bySection).forEach(s => { if (!order.includes(s)) order.push(s); });
 
