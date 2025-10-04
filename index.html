@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="lightbox.css?v=7" />
 
   <style>
-    /* Layout tweaks for header/footer logos (translucent-safe) */
+    /* Header / logo */
     .logo-wrap {
       display: flex;
       align-items: center;
@@ -20,47 +20,35 @@
     .logo-wrap img {
       height: 60px;
       display: block;
-<style>
-  /* Make header lighter on small screens */
-  @media (max-width: 768px) {
-    .logo-wrap { padding: 6px 8px !important; }
-    .logo-wrap img { height: 40px !important; }
-    header nav a { margin-right: 10px !important; font-size: .95rem; }
-  }
-
-  /* Optional: if your header is "frozen"/sticky and too tall, un-stick it */
-  /* header { position: static !important; } */
-
-  /* Slim sticky theme bar */
-  .theme-bar {
-    position: sticky;
-    top: 0;                 /* if your header is sticky, change to top: 56px */
-    z-index: 900;
-    background: #fff;
-    border-bottom: 1px solid #eee;
-    padding: 6px 8px;
-    display: flex;
-    gap: 8px;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-  .theme-bar::-webkit-scrollbar { display: none; }
-
-  .theme-bar .pill {
-    white-space: nowrap;
-    padding: 6px 10px;
-    border: 1px solid #e5e7eb;
-    border-radius: 999px;
-    background: #fafafa;
-    font-size: .9rem;
-    cursor: pointer;
-  }
-  .theme-bar .pill:active { transform: translateY(1px); }
-</style>
     }
     header nav a { margin-right: 16px; }
 
-    /* About photo responsive */
+    /* Slim sticky theme bar (above gallery) */
+    .theme-bar {
+      position: sticky;
+      top: 0; /* if your header is sticky, change to the header height (e.g., 56px) */
+      z-index: 900;
+      background: #fff;
+      border-bottom: 1px solid #eee;
+      padding: 6px 8px;
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .theme-bar::-webkit-scrollbar { display: none; }
+    .theme-bar .pill {
+      white-space: nowrap;
+      padding: 6px 10px;
+      border: 1px solid #e5e7eb;
+      border-radius: 999px;
+      background: #fafafa;
+      font-size: .9rem;
+      cursor: pointer;
+    }
+    .theme-bar .pill:active { transform: translateY(1px); }
+
+    /* About photos */
     #about img.artist-photo {
       max-width: 300px;
       border-radius: 12px;
@@ -74,7 +62,18 @@
       margin: 1rem auto;
     }
 
-    /* Full-width section images (Recent Show) */
+    /* Description style under each theme heading (rendered by JS) */
+    .theme-desc {
+      text-align: center;
+      font-size: 1.1rem;
+      font-style: italic;
+      color: #555;
+      margin: .25rem 0 1rem;
+      max-width: 70ch;
+      margin-left: auto; margin-right: auto;
+    }
+
+    /* Full-width image (Recent Show) */
     .fullbleed {
       width: 100%;
       max-width: 100%;
@@ -87,43 +86,39 @@
       margin-top: 3rem;
       padding: 1.5rem 0;
       border-top: 1px solid #e5e7eb;
+      text-align: center;
+      opacity: .8;
     }
 
     /* Mobile tweaks */
     @media (max-width: 768px) {
+      .logo-wrap { padding: 6px 8px; }
+      .logo-wrap img { height: 40px; }
+      header nav a { margin-right: 10px; font-size: .95rem; }
       #about img.artist-photo {
         float: none;
         display: block;
         margin: 1rem auto;
         max-width: 90%;
       }
-      .logo-wrap img { height: 50px; }
     }
   </style>
 </head>
 
-<!-- Header / Nav -->
-<header>
-  <div class="logo-wrap">
-    <img src="hippoartzlogo.jpg" alt="Hippo.Artz logo">
-    <nav>
-      <a href="#about">About</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#recent-show">Recent Show</a>
-      <a href="#exhibitions">Exhibitions</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
-
-<!-- Slim sticky theme bar (sits above the gallery) -->
-<div class="theme-bar">
-  <button class="pill" data-goto="Queens">Queens</button>
-  <button class="pill" data-goto="Dreamscapes">Dreamscapes</button>
-  <button class="pill" data-goto="Nightmares">Nightmares</button>
-  <button class="pill" data-goto="Unheard Echoes">Unheard Echoes</button>
-  <button class="pill" data-goto="In Memory of">In Memory of</button>
-</div>
-
+<body>
+  <!-- Header / Nav -->
+  <header>
+    <div class="logo-wrap">
+      <img src="hippoartzlogo.jpg" alt="Hippo.Artz logo">
+      <nav>
+        <a href="#about">About</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#recent-show">Recent Show</a>
+        <a href="#exhibitions">Exhibitions</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
   <!-- Hero -->
   <section id="hero" class="hero">
@@ -154,47 +149,45 @@
   <!-- About -->
   <section id="about" class="section">
     <h2>About</h2>
-  <img src="Resize1/me1.jpg" alt="Hippo.Artz with 'Mother Earth' artwork" class="artist-photo">
-    <p>Hippo.Artz paints figures suspended in surreal landscapes—bodies reshaped by violence, survival, and reclamation.
-       The work sits in the tension between oppression and defiance, inviting viewers to look longer than comfort allows.</p>
+    <img src="Resize1/me1.jpg" alt="Hippo.Artz with 'Mother Earth' artwork" class="artist-photo">
+    <p>Hippo.Artz paints figures suspended in surreal landscapes—bodies reshaped by violence, survival, and reclamation. The work sits in the tension between oppression and defiance, inviting viewers to look longer than comfort allows.</p>
 
     <h2>Meet the Acrylic Alchemist</h2>
-    <p>Welcome to HIPPO.ARTZ. This site is a novice apothecary of experimentation with color, texture, and storytelling. 
-       <strong>Hippo.Artz</strong> is a <strong>self-taught acrylic painter</strong>, a <em>visual storyweaver</em>, and a proud blerd. 
-       The canvases explore how <strong>emotion</strong> and <strong>identity</strong> take shape through bold strokes, surreal dreamscapes, and Black Girl Magic.</p>
+    <p>Welcome to HIPPO.ARTZ: a novice apothecary of experimentation with color, texture, and storytelling. <strong>Hippo.Artz</strong> is a self-taught acrylic painter and visual storyweaver. The canvases explore how <strong>emotion</strong> and <strong>identity</strong> take shape through bold strokes, surreal dreamscapes, and Black Girl Magic.</p>
 
-    <blockquote style="text-align:center; font-size:1.1rem; font-style:italic; color:#555;">
-      “I am a pessimist if I am not careful.” — Octavia E. Butler
-    </blockquote>
+    <blockquote class="theme-desc">“I am a pessimist if I am not careful.” — Octavia E. Butler</blockquote>
 
-    <p>Every piece is layered with <strong>emotion</strong>, lived experience, and a shimmer of <em>Black Girl Magic</em>.</p> 
-       <p></p>Acrylic paint on canvas and unfinished wood is my primary medium.</p>
+    <p>Every piece is layered with <strong>emotion</strong>, lived experience, and a shimmer of <em>Black Girl Magic</em>. Acrylic on canvas and unfinished wood is the primary medium.</p>
 
-    <p>Outside the studio: public health work and two cats, Fawn and Goatee. 
-      <p>This site is both my portfolio and myplayground</p>
-        <p></p>Take the time to browse, reflect, connect. <em>Be well.</em></p>
+    <p>Outside the studio: public health work and two cats, Fawn and Goatee. This site is both portfolio and playground—browse, reflect, connect. <em>Be well.</em></p>
   </section>
 
   <!-- Projects -->
   <section id="projects" class="section">
     <h2>Current Project Themes</h2>
-    My pieces tend to fall between these common themes
-    <p>Queens</p>
-    <p>Dreamscapes</p> 
-      <p>& Nightmares</p>
-    <p>Unheard Echos</p>
-    <p>In Memory Of</p>
-    
- <!-- Gallery -->
-<section id="gallery" class="section">
-  <h2>Gallery</h2>
-  <!-- Sections + images are injected below by render-gallery.js:
-       Queens (desc) + images,
-       Dreamscapes and Nightmares (desc) + images, etc. -->
-</section>
+    <ul style="line-height:1.6; margin-bottom:1rem;">
+      <li><strong>Queens</strong> — Beauty, visibility, identity, representation, belonging.</li>
+      <li><strong>Dreamscapes and Nightmares</strong> — Without darkness, how would we know the light? Eerie, surreal, close to the veil.</li>
+      <li><strong>Unheard Echoes</strong> — Chains, crowns, tears—the weight and endurance of Black women.</li>
+      <li><strong>In Memory of</strong> — Tender reckonings, grief-work, remembrance.</li>
+    </ul>
+  </section>
 
+  <!-- Slim sticky theme bar (sits above the gallery) -->
+  <div class="theme-bar">
+    <button class="pill" data-goto="Queens">Queens</button>
+    <button class="pill" data-goto="Dreamscapes">Dreamscapes</button>
+    <button class="pill" data-goto="Nightmares">Nightmares</button>
+    <button class="pill" data-goto="Unheard Echoes">Unheard Echoes</button>
+    <button class="pill" data-goto="In Memory of">In Memory of</button>
+  </div>
 
-    <!-- The gallery items will be injected right below by render-gallery.js -->
+  <!-- Gallery -->
+  <section id="gallery" class="section">
+    <h2>Gallery</h2>
+    <!-- Sections + images are injected below by render-gallery.js:
+         Queens (desc) + images,
+         Dreamscapes and Nightmares (desc) + images, etc. -->
   </section>
 
   <!-- Recent Show -->
@@ -222,138 +215,53 @@
       <a href="https://www.facebook.com/share/1CiBRwgVrH/" target="_blank" rel="noopener">Facebook</a>
       <a href="https://instagram.com/hippo.artz" target="_blank" rel="noopener">Instagram</a>
     </div>
-
-    <section id="rights" class="section" style="padding-top:1rem;">
-      <h2>Copyright & Image Rights</h2>
-      <p>All artwork on this site is original and created by Hippo.Artz. © 2025 Hippo.Artz. All rights reserved. 
-         Unauthorized use, reproduction, or distribution is prohibited. Licensing, press use, and collaborations are welcome—please <a href="#contact">get in touch</a>.</p>
-    </section>
   </section>
 
-  <!-- Footer with logo at the bottom -->
+  <!-- Footer -->
   <footer>
     <div class="logo-wrap" style="justify-content:center;">
       <img src="hippoartzlogo.jpg" alt="Hippo.Artz logo">
     </div>
-    <p style="text-align:center; opacity:.7;">© 2025 Hippo.Artz. All rights reserved.</p>
+    <p>© 2025 Hippo.Artz. All rights reserved.</p>
   </footer>
 
-  <script src="lightbox.js?v=7" defer></script>
-<script src="render-gallery.js?v=7" defer></script>
-<script>
-  const ALIAS = {
-    "queens": "Queens",
-    "dreamscapes": "Dreamscapes and Nightmares",
-    "nightmares": "Dreamscapes and Nightmares",
-    "unheard echoes": "Unheard Echoes",
-    "unheard echos": "Unheard Echoes",
-    "in memory of": "In Memory of",
-    "in living memory": "In Memory of"
-  };
-  function slugify(t){ return String(t).toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,''); }
-  function resolveSection(label){ const k = String(label||"").trim().toLowerCase(); return ALIAS[k] || label; }
-
-  function wireThemeNav(){
-    document.querySelectorAll('.theme-bar button, .theme-shortcuts button, #projects .jump').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const raw = btn.getAttribute('data-goto') || btn.textContent;
-        const target = resolveSection(raw);
-        const id = 'sec-' + slugify(target);
-        const el = document.getElementById(id);
-        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      });
-    });
-  }
-
-  document.addEventListener('DOMContentLoaded', () => {
-    let tries = 0;
-    const t = setInterval(() => {
-      if (document.querySelector('#gallery h3')) { clearInterval(t); wireThemeNav(); }
-      if (++tries > 30) clearInterval(t);
-    }, 200);
-  });
-</script>
-
-  
   <!-- Scripts: load AFTER the page -->
   <script src="lightbox.js?v=7" defer></script>
   <script src="render-gallery.js?v=7" defer></script>
-<script>
-  // Match button labels to real section names
-  const ALIAS = {
-    "queens": "Queens",
-    "dreamscapes": "Dreamscapes and Nightmares",
-    "nightmares": "Dreamscapes and Nightmares",
-    "unheard echoes": "Unheard Echoes",
-    "unheard echos": "Unheard Echoes",   // common misspelling
-    "in memory of": "In Memory of",
-    "in living memory": "In Memory of"   // just in case
-  };
 
-  function slugify(txt){
-    return String(txt).toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');
-  }
-  function resolveSection(label){
-    const k = String(label||"").trim().toLowerCase();
-    return ALIAS[k] || label;
-  }
-  function wireThemeShortcuts(){
-    // Works for header AND projects section
-    document.querySelectorAll('.theme-shortcuts button, #projects .jump').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const raw = btn.getAttribute('data-goto') || btn.textContent;
-        const targetLabel = resolveSection(raw);
-        const id = 'sec-' + slugify(targetLabel);
-        const el = document.getElementById(id);
-        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      });
-    });
-  }
-
-  // Run after render-gallery.js has created the <h3> anchors
-  document.addEventListener('DOMContentLoaded', () => {
-    let tries = 0;
-    const t = setInterval(() => {
-      if (document.querySelector('#gallery h3')) {
-        clearInterval(t);
-        wireThemeShortcuts();
-      }
-      if (++tries > 30) clearInterval(t);
-    }, 200);
-  });
-
+  <!-- Alias + smooth scroll for theme buttons (works with the sticky bar) -->
   <script>
-    // After render-gallery.js runs, it creates <h3> headings for each section.
-    // This assigns IDs to those headings and makes the buttons scroll to them.
-    document.addEventListener('DOMContentLoaded', function () {
-      function slugify(txt){ return String(txt).toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,''); }
+    const ALIAS = {
+      "queens": "Queens",
+      "dreamscapes": "Dreamscapes and Nightmares",
+      "nightmares": "Dreamscapes and Nightmares",
+      "unheard echoes": "Unheard Echoes",
+      "unheard echos": "Unheard Echoes",
+      "in memory of": "In Memory of",
+      "in living memory": "In Memory of"
+    };
+    function slugify(t){ return String(t).toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,''); }
+    function resolveSection(label){ const k = String(label||"").trim().toLowerCase(); return ALIAS[k] || label; }
 
-      function assignIds() {
-        document.querySelectorAll('#gallery h3').forEach(h3 => {
-          const name = h3.textContent.trim();
-          const id = 'sec-' + slugify(name);
-          h3.id = id;
+    function wireThemeNav(){
+      document.querySelectorAll('.theme-bar button').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const raw = btn.getAttribute('data-goto') || btn.textContent;
+          const target = resolveSection(raw);
+          const id = 'sec-' + slugify(target);
+          const el = document.getElementById(id);
+          if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
         });
-      }
+      });
+    }
 
-      // Try at intervals in case render finishes a tick later
+    document.addEventListener('DOMContentLoaded', () => {
+      // Wait until render-gallery.js creates the <h3> headings with IDs
       let tries = 0;
       const t = setInterval(() => {
-        if (document.querySelector('#gallery h3')) {
-          clearInterval(t);
-          assignIds();
-        }
+        if (document.querySelector('#gallery h3')) { clearInterval(t); wireThemeNav(); }
         if (++tries > 30) clearInterval(t);
       }, 200);
-
-      document.querySelectorAll('.theme-shortcuts button').forEach(btn => {
-        btn.addEventListener('click', () => {
-          const label = btn.getAttribute('data-goto');
-          const id = 'sec-' + slugify(label);
-          const target = document.getElementById(id);
-          if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        });
-      });
     });
   </script>
 </body>
