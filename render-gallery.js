@@ -2,6 +2,18 @@
 (async function () {
   // ---- Display labels & descriptions (shown on page) ----
  const DISPLAY = 
+   // Canonical names for variants/typos so headings + buttons always match
+const CANON = {
+  "dreamscapes": "Dreamscapes and Nightmares",
+  "nightmares": "Dreamscapes and Nightmares",
+  "unheard echos": "Unheard Echoes",
+  "in living memory": "In Memory of"
+};
+function toCanon(label) {
+  const k = String(label || "").trim().toLowerCase();
+  return CANON[k] || label;
+}
+
  {
   "Queens": {
     label: "Queens",
@@ -82,81 +94,99 @@
     // Render sections
     container.querySelectorAll(".injected").forEach(n => n.remove()); // clear previous if any
 
-    order.forEach(sectionKey => {
-      const group = bySection[sectionKey];
-      if (!group || !group.length) return;
+    // === BEGIN order.forEach replacement ===
+order.forEach(sectionKey => {
+  const group = bySection[sectionKey];
+  if (!group || !group.length) return;
 
-      const wrap = document.createElement("div");
-      wrap.className = "injected";
-      container.appendChild(wrap);
+  const wrap = document.createElement("div");
+  wrap.className = "injected";
+  container.appendChild(wrap);
 
-      // Heading + anchor id (so jump buttons work)
-      const display = DISPLAY[sectionKey] || { label: sectionKey, desc: "" };
-      const h3 = document.createElement("h3");
-      h3.textContent = display.label;
-      h3.id = "sec-" + slugify(display.label);
-      wrap.appendChild(h3);
-      
-// Description under the heading (supports HTML via descHtml; falls back to plain text)
-if (display.descHtml) {
-  const holder = document.createElement('div');
-  holder.innerHTML = display.descHtml.trim();
-  const node = holder.firstElementChild || holder;
-  wrap.appendChild(node);
-} else if (display.desc) {
-  const p = document.createElement('blockquote');
-  p.className = 'theme-desc';
-  p.textContent = display.desc;
-  wrap.appendChild(p);
-}
+  // Heading + anchors (canonical + shadow for raw label)
+  const rawLabel = sectionKey;                      // label as it appears in JSON
+  const canonicalLabel = toCanon(rawLabel);         // fix typos/aliases
+  const display = DISPLAY[canonicalLabel] || DISPLAY[rawLabel] || { label: canonicalLabel, desc: "" };
 
-      // Grid of items
-      const grid = document.createElement("div");
-      grid.style.display = "grid";
-      grid.style.gridTemplateColumns = "repeat(auto-fill, minmax(220px, 1fr))";
-      grid.style.gap = "16px";
-      wrap.appendChild(grid);
+  const h3 = document.createElement("h3");
+  h3.textContent = display.label || canonicalLabel;
+  h3.id = "sec-" + slugify(canonicalLabel);
+  wrap.appendChild(h3);
 
-      group.forEach(it => {
-        const card = document.createElement("a");
-        card.href = it.src || it.thumb || "#";
-        card.className = "art-card";
-        card.style.display = "block";
-        card.style.background = "var(--card, #fff)";
-        card.style.border = "1px solid var(--border, #e5e7eb)";
-        card.style.borderRadius = "16px";
-        card.style.boxShadow = "0 6px 20px rgba(0,0,0,0.06)";
-        card.style.overflow = "hidden";
-        card.style.textDecoration = "none";
-        card.style.color = "inherit";
+  // Shadow anchor lets buttons using the raw (possibly misspelled) label still work
+  if (canonicalLabel !== rawLabel) {
+    const ghost = document.createElement("span");
+    ghost.id = "sec-" + slugify(rawLabel);
+    ghost.style.position = "relative";
+    ghost.style.top = "-1px";
+    ghost.setAttribute("aria-hidden", "true");
+    wrap.appendChild(ghost);
+  }
 
-        const img = document.createElement("img");
-        img.loading = "lazy";
-        img.alt = it.alt || it.title || "";
-        img.src = it.thumb || it.src || "";
-        img.style.width = "100%";
-        img.style.height = "220px";
-        img.style.objectFit = "cover";
-        card.appendChild(img);
+  // Description under the heading (supports HTML via descHtml; falls back to plain text)
+  if (display.descHtml) {
+    const holder = document.createElement('div');
+    holder.innerHTML = display.descHtml.trim();
+    const node = holder.firstElementChild || holder;
+    wrap.appendChild(node);
+  } else if (display.desc) {
+    const p = document.createElement('blockquote');
+    p.className = 'theme-desc';
+    p.textContent = display.desc;
+    wrap.appendChild(p);
+  }
 
-        const meta = document.createElement("div");
-        meta.style.padding = "12px 14px";
-        meta.innerHTML = `
-          <div style="font-weight:600">${it.title || "Untitled"}</div>
-          <div style="opacity:.7; font-size:.9rem">
-            ${[it.medium, it.size, it.year].filter(Boolean).join(" • ")}
-          </div>
-          <div style="margin-top:4px; font-size:.9rem; color:#374151;">
-            ${it.price || "Available on request"}
-          </div>
-        `;
-        card.appendChild(meta);
+  // Grid of items
+  const grid = document.createElement("div");
+  grid.style.display = "grid";
+  grid.style.gridTemplateColumns = "repeat(auto-fill, minmax(220px, 1fr))";
+  grid.style.gap = "16px";
+  wrap.appendChild(grid);
 
-        grid.appendChild(card);
-      });
+  group.forEach(it => {
+    const card = document.createElement("a");
+    card.href = it.src || it.thumb || "#";
+    card.className = "art-card";
+    card.dataset.lbSrc = it.src || it.thumb || "";       // for safe lightbox
+    card.dataset.lbTitle = it.title || "Untitled";
+    card.style.display = "block";
+    card.style.background = "var(--card, #fff)";
+    card.style.border = "1px solid var(--border, #e5e7eb)";
+    card.style.borderRadius = "16px";
+    card.style.boxShadow = "0 6px 20px rgba(0,0,0,0.06)";
+    card.style.overflow = "hidden";
+    card.style.textDecoration = "none";
+    card.style.color = "inherit";
 
-      bindLightbox(grid, group);
-    });
+    const img = document.createElement("img");
+    img.loading = "lazy";
+    img.alt = it.alt || it.title || "";
+    img.src = it.thumb || it.src || "";
+    img.style.width = "100%";
+    img.style.height = "220px";
+    img.style.objectFit = "cover";
+    card.appendChild(img);
+
+    const meta = document.createElement("div");
+    meta.style.padding = "12px 14px";
+    meta.innerHTML = `
+      <div style="font-weight:600">${it.title || "Untitled"}</div>
+      <div style="opacity:.7; font-size:.9rem">
+        ${[it.medium, it.size, it.year].filter(Boolean).join(" • ")}
+      </div>
+      <div style="margin-top:4px; font-size:.9rem; color:#374151;">
+        ${it.price || "Available on request"}
+      </div>
+    `;
+    card.appendChild(meta);
+
+    grid.appendChild(card);
+  });
+
+  bindLightbox(grid, group);
+});
+// === END order.forEach replacement ===
+
 
     // Hook up jump buttons from the Projects section
     document.querySelectorAll("#projects .jump").forEach(btn => {
