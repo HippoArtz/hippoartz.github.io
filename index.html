@@ -209,8 +209,50 @@
   <!-- Scripts: load AFTER the page -->
   <script src="lightbox.js?v=7" defer></script>
   <script src="render-gallery.js?v=7" defer></script>
+<script>
+  // Match button labels to real section names
+  const ALIAS = {
+    "queens": "Queens",
+    "dreamscapes": "Dreamscapes and Nightmares",
+    "nightmares": "Dreamscapes and Nightmares",
+    "unheard echoes": "Unheard Echoes",
+    "unheard echos": "Unheard Echoes",   // common misspelling
+    "in memory of": "In Memory of",
+    "in living memory": "In Memory of"   // just in case
+  };
 
-  <!-- Wire up theme buttons to the rendered section headings -->
+  function slugify(txt){
+    return String(txt).toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');
+  }
+  function resolveSection(label){
+    const k = String(label||"").trim().toLowerCase();
+    return ALIAS[k] || label;
+  }
+  function wireThemeShortcuts(){
+    // Works for header AND projects section
+    document.querySelectorAll('.theme-shortcuts button, #projects .jump').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const raw = btn.getAttribute('data-goto') || btn.textContent;
+        const targetLabel = resolveSection(raw);
+        const id = 'sec-' + slugify(targetLabel);
+        const el = document.getElementById(id);
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+  }
+
+  // Run after render-gallery.js has created the <h3> anchors
+  document.addEventListener('DOMContentLoaded', () => {
+    let tries = 0;
+    const t = setInterval(() => {
+      if (document.querySelector('#gallery h3')) {
+        clearInterval(t);
+        wireThemeShortcuts();
+      }
+      if (++tries > 30) clearInterval(t);
+    }, 200);
+  });
+
   <script>
     // After render-gallery.js runs, it creates <h3> headings for each section.
     // This assigns IDs to those headings and makes the buttons scroll to them.
