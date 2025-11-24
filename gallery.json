@@ -1169,16 +1169,16 @@
     "medium": "acrylic paint on canvas",
     "theme": "Queens"
   },
-  {
-    "file": "expectations.jpg",
-    "title": "Their Expectations",
-    "size": "-",
-    "alt": "A woman lays prone, held in place by metal shackles. She is surrounded by mirrors that reflect, distort, fragment and exaggerate her reflection. Each frame shows a different version- she is thinner, quieter, smaller, dimmer, none reflect her true self/who she wants to be. Her body real is trapped in the center, tense, aware and alone.",
-    "blurb": "A lifetime of expectations that forever surround her. Every mirror lies, Every reflection demand she be something else. Softer, smaller, nicer, less. She is trapped in the center of who they want her to be. She is shackled and forced to observe who they want to be. She fights to break away and refuses the roles written for her. She reaches for herself. Even knowing herself and who she wants to be, can she really escape who they want her to be?",
-    "price": "POR",
-    "medium": "acrylic paint on canvas",
-    "theme": "Queens"
-  },
+ {
+  "file": "expectations.jpg",
+  "title": "Their Expectations",
+  "size": "36x48in",
+  "alt": "A Black woman stands surrounded by mirrors that reflect the versions of her other people expect to see.",
+  "blurb": "She’s forced to confront every role and mask the world demands of her, while her own self threatens to disappear behind the glass.",
+  "price": "POR",
+  "medium": "acrylic paint on canvas",
+  "theme": "Unheard Echoes"
+},
   {
     "file": "eyethrilled.jpg",
     "title": "Thrilled",
