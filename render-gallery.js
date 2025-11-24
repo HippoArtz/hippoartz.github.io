@@ -1,7 +1,6 @@
-// render-gallery.js — fixed build for flat array JSON (filename/title/size/alt/blurb/price/medium/theme)
+// render-gallery.js — flat-array JSON build: filename + theme + price + descriptions
 (async function () {
-
-  // ---- Theme display block stays exactly as you have it ----
+  // ---- Section display copy (headings + descriptions) ----
   const DISPLAY = {
     "Queens": {
       label: "Queens",
@@ -37,11 +36,12 @@
     }
   };
 
-  // ---- Canonical theme names ----
+  // ---- Canonical names for variants/typos so headings + buttons match ----
   const CANON = {
     "dreamscapes": "Dreamscapes and Nightmares",
     "nightmares": "Dreamscapes and Nightmares",
     "nighmares": "Dreamscapes and Nightmares",
+    "dreamscapes & nightmares": "Dreamscapes and Nightmares",
     "unheard echos": "Unheard Echoes",
     "in living memory": "In Memory of"
   };
@@ -51,32 +51,38 @@
   }
 
   function slugify(txt){
-    return String(txt).toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');
+    return String(txt).toLowerCase()
+      .replace(/[^a-z0-9]+/g,'-')
+      .replace(/^-+|-+$/g,'');
   }
 
+  // Always fetch from the site ROOT (gallery.json is next to index.html)
   async function loadRootJSON(file) {
-    const res = await fetch(`/${file}?ts=${Date.now()}`, { cache: "no-store" });
-    if (!res.ok) throw new Error(`Failed to load ${file}: ${res.status}`);
+    const url = `/${file}?ts=${Date.now()}`; // cache-bust
+    const res = await fetch(url, { cache: "no-store" });
+    if (!res.ok) throw new Error(`Failed to load ${file}: ${res.status} ${res.statusText}`);
     return res.json();
   }
 
+  // Lightbox binder — uses HippoLightbox v2 if present
   function bindLightbox(grid, group) {
     const nodes = grid.querySelectorAll("a.art-card");
-    if (window.HippoLightbox && window.HippoLightbox.bind) {
+    if (window.HippoLightbox && typeof window.HippoLightbox.bind === "function") {
       window.HippoLightbox.bind(nodes, group);
     }
   }
 
   try {
-    // ⭐ EXPECT A FLAT ARRAY NOW
+    // ⭐ Your gallery.json is a FLAT ARRAY, not { items: [...] }
     const rows = await loadRootJSON("gallery.json");
-
-    if (!Array.isArray(rows)) throw new Error("gallery.json must be an array");
+    if (!Array.isArray(rows)) {
+      throw new Error("gallery.json must be an array of items");
+    }
 
     const container = document.querySelector("#gallery");
     if (!container) throw new Error("No #gallery section found.");
 
-    // ⭐ Group by THEME (not 'section', not 'items')
+    // Group items by THEME
     const byTheme = {};
     rows.forEach(it => {
       const rawTheme = it.theme || "Unsorted";
@@ -84,21 +90,20 @@
       (byTheme[canon] ||= []).push(it);
     });
 
-    // ⭐ Known order + any extra categories
-    const order = [
+    // Render order: your main four, then any extras
+    const baseOrder = [
       "Queens",
       "Dreamscapes and Nightmares",
       "Unheard Echoes",
-      "In Memory of",
-      ...Object.keys(byTheme).filter(x =>
-        !["Queens","Dreamscapes and Nightmares","Unheard Echoes","In Memory of"].includes(x)
-      )
+      "In Memory of"
     ];
+    const extra = Object.keys(byTheme).filter(t => !baseOrder.includes(t));
+    const order = [...baseOrder, ...extra];
 
-    // Clear current
+    // Clear previous injected content
     container.querySelectorAll(".injected").forEach(n => n.remove());
 
-    // ---- Render each theme ----
+    // Render each theme section
     order.forEach(theme => {
       const group = byTheme[theme];
       if (!group || !group.length) return;
@@ -115,9 +120,9 @@
       wrap.appendChild(h3);
 
       if (display.descHtml) {
-        const d = document.createElement("div");
-        d.innerHTML = display.descHtml.trim();
-        wrap.appendChild(d.firstElementChild);
+        const holder = document.createElement("div");
+        holder.innerHTML = display.descHtml.trim();
+        wrap.appendChild(holder.firstElementChild || holder);
       }
 
       const grid = document.createElement("div");
@@ -127,14 +132,22 @@
       wrap.appendChild(grid);
 
       group.forEach(it => {
-        // Build the full image path
         const src = `Resize1/${it.file}`;
 
         const card = document.createElement("a");
-        card.className = "art-card";
         card.href = src;
-        card.dataset.lbSrc = src;
+        card.className = "art-card";
+        card.dataset.lbSrc   = src;
         card.dataset.lbTitle = it.title || "Untitled";
+
+        card.style.display = "block";
+        card.style.background = "var(--card, #fff)";
+        card.style.border = "1px solid var(--border, #e5e7eb)";
+        card.style.borderRadius = "16px";
+        card.style.boxShadow = "0 6px 20px rgba(0,0,0,0.06)";
+        card.style.overflow = "hidden";
+        card.style.textDecoration = "none";
+        card.style.color = "inherit";
 
         const img = document.createElement("img");
         img.loading = "lazy";
@@ -153,7 +166,7 @@
             ${[it.medium, it.size].filter(Boolean).join(" • ")}
           </div>
           <div style="margin-top:4px; font-size:.9rem; color:#374151;">
-            ${it.price || "Price available on request"}
+            ${(it.price || "").toString().trim() || "Price available on request"}
           </div>
         `;
         card.appendChild(meta);
@@ -162,6 +175,16 @@
       });
 
       bindLightbox(grid, group);
+    });
+
+    // Theme jump buttons
+    document.querySelectorAll('.theme-bar button, .theme-shortcuts button, #projects .jump').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const raw = btn.getAttribute('data-goto') || btn.textContent;
+        const id  = 'sec-' + slugify(toCanon(raw));
+        const el  = document.getElementById(id);
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
     });
 
   } catch (err) {
@@ -175,5 +198,4 @@
          </div>`);
     }
   }
-
 })();
