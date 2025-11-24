@@ -363,8 +363,8 @@
     "file": "fairydance.jpg",
     "title": "Fairy Dance",
     "size": "16x20in",
-    "alt": "",
-    "blurb": "",
+    "alt": "-",
+    "blurb": "-",
     "price": "POR",
     "medium": "acrylic paint on canvas",
     "theme": "Queens"
@@ -1094,7 +1094,7 @@
     "title": "Stolen Autonomy",
     "size": "A set of bars set into a pair of full purple painted lips. A caged mouth. A single brown finger presses against them in a shhh gesture. Within the mouth behind the bars, two hands tightly grip the bars.",
     "alt": "Silence isn't always chosen. This is the hush demanded of us. They silence our lips with laws, and words and policies. We're told to be quiet, be polite, be nice, don't make a scene. What happens when we break free?",
-    "blurb": "",
+    "blurb": "-",
     "price": "POR",
     "medium": "acrylic paint on canvas",
     "theme": "Unheard Echos"
