@@ -44,18 +44,17 @@
     "dreamscapes & nightmares": "Dreamscapes and Nightmares",
     "unheard echos": "Unheard Echoes",
     "in living memory": "In Memory of"
-  }
-    <button data-goto="Their Expectations">Their Expectations</button>
-    ;
+  };
+
   function toCanon(label) {
     const k = String(label || "").trim().toLowerCase();
     return CANON[k] || label;
   }
 
-  function slugify(txt){
+  function slugify(txt) {
     return String(txt).toLowerCase()
-      .replace(/[^a-z0-9]+/g,'-')
-      .replace(/^-+|-+$/g,'');
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-+|-+$/g, "");
   }
 
   // Always fetch from the site ROOT (gallery.json is next to index.html)
@@ -67,11 +66,13 @@
   }
 
   // Lightbox binder — uses HippoLightbox v2 if present
-  function bindLightbox(grid, group) {
-    const nodes = grid.querySelectorAll("a.art-card");
+  function bindLightbox(root, group) {
+    const nodes = root.querySelectorAll("a[data-lb-src]");
     if (window.HippoLightbox && typeof window.HippoLightbox.bind === "function") {
       window.HippoLightbox.bind(nodes, group);
     }
+  }
+
   // ---- Hero feature: "Their Expectations" crown jewel ----
   function renderExpectationsFeature(rows, container) {
     const hero = rows.find(it =>
@@ -168,10 +169,9 @@
     // Lightbox for the hero
     bindLightbox(wrap, [hero]);
   }
-  }
 
   try {
-    // ⭐ Your gallery.json is a FLAT ARRAY, not { items: [...] }
+    // Your gallery.json is a FLAT ARRAY, not { items: [...] }
     const rows = await loadRootJSON("gallery.json");
     if (!Array.isArray(rows)) {
       throw new Error("gallery.json must be an array of items");
@@ -179,6 +179,10 @@
 
     const container = document.querySelector("#gallery");
     if (!container) throw new Error("No #gallery section found.");
+
+    // Clear previous injected content
+    container.querySelectorAll(".injected").forEach(n => n.remove());
+
     // Hero crown jewel section
     renderExpectationsFeature(rows, container);
 
@@ -199,9 +203,6 @@
     ];
     const extra = Object.keys(byTheme).filter(t => !baseOrder.includes(t));
     const order = [...baseOrder, ...extra];
-
-    // Clear previous injected content
-    container.querySelectorAll(".injected").forEach(n => n.remove());
 
     // Render each theme section
     order.forEach(theme => {
@@ -274,7 +275,7 @@
         grid.appendChild(card);
       });
 
-      bindLightbox(grid, group);
+      bindLightbox(wrap, group);
     });
 
     // Theme jump buttons
