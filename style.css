@@ -173,3 +173,11 @@ figcaption { margin-top: 8px; font-size: 0.9em; color: var(--text); }
   .logo-wrap img { height: 40px; }
   header nav a { margin-right: 10px; font-size: .95rem; }
 }
+.about-photo img {
+  width: 100%;
+  max-width: 280px;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  display: block;
+  margin: 1rem auto;
+}
