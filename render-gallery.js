@@ -44,7 +44,9 @@
     "dreamscapes & nightmares": "Dreamscapes and Nightmares",
     "unheard echos": "Unheard Echoes",
     "in living memory": "In Memory of"
-  };
+  }
+    <button data-goto="Their Expectations">Their Expectations</button>
+    ;
   function toCanon(label) {
     const k = String(label || "").trim().toLowerCase();
     return CANON[k] || label;
@@ -70,6 +72,102 @@
     if (window.HippoLightbox && typeof window.HippoLightbox.bind === "function") {
       window.HippoLightbox.bind(nodes, group);
     }
+  // ---- Hero feature: "Their Expectations" crown jewel ----
+  function renderExpectationsFeature(rows, container) {
+    const hero = rows.find(it =>
+      (it.title || "").toLowerCase().includes("their expectations")
+    );
+    if (!hero) return;
+
+    const src = `Resize1/${hero.file}`;
+
+    const wrap = document.createElement("section");
+    wrap.className = "injected expectations-hero";
+    wrap.style.marginBottom = "2.5rem";
+    wrap.style.padding = "1.25rem";
+    wrap.style.borderRadius = "18px";
+    wrap.style.border = "1px solid var(--border, #e5e7eb)";
+    wrap.style.boxShadow = "0 14px 35px rgba(0,0,0,0.12)";
+    wrap.style.background = "var(--card, #fff)";
+    wrap.style.maxWidth = "960px";
+    wrap.style.marginInline = "auto";
+    container.appendChild(wrap);
+
+    const title = document.createElement("h2");
+    title.textContent = "Crown Jewel: Their Expectations";
+    title.id = "sec-their-expectations";
+    title.style.fontSize = "1.5rem";
+    title.style.marginBottom = ".5rem";
+    wrap.appendChild(title);
+
+    const intro = document.createElement("p");
+    intro.textContent =
+      "The anchor piece of this body of work — a confrontation with roles, mirrors, and the weight of being watched.";
+    intro.style.fontSize = ".95rem";
+    intro.style.opacity = ".85";
+    intro.style.marginBottom = "1rem";
+    wrap.appendChild(intro);
+
+    const layout = document.createElement("div");
+    layout.style.display = "flex";
+    layout.style.flexDirection = "column";
+    layout.style.gap = "1rem";
+    wrap.appendChild(layout);
+
+    // Image block
+    const imgLink = document.createElement("a");
+    imgLink.href = src;
+    imgLink.dataset.lbSrc = src;
+    imgLink.dataset.lbTitle = hero.title || "Their Expectations";
+
+    const img = document.createElement("img");
+    img.loading = "lazy";
+    img.src = src;
+    img.alt = hero.alt || hero.title || "";
+    img.style.width = "100%";
+    img.style.maxHeight = "420px";
+    img.style.objectFit = "cover";
+    img.style.borderRadius = "14px";
+
+    imgLink.appendChild(img);
+    layout.appendChild(imgLink);
+
+    // Text block
+    const text = document.createElement("div");
+    text.style.fontSize = ".95rem";
+    text.style.lineHeight = "1.5";
+    layout.appendChild(text);
+
+    const metaTop = document.createElement("p");
+    metaTop.style.fontWeight = "600";
+    metaTop.textContent = hero.title || "Their Expectations";
+    text.appendChild(metaTop);
+
+    const metaLine = document.createElement("p");
+    metaLine.style.opacity = ".8";
+    metaLine.textContent = [
+      hero.medium,
+      hero.size
+    ].filter(Boolean).join(" • ");
+    text.appendChild(metaLine);
+
+    if (hero.blurb || hero.alt) {
+      const blurb = document.createElement("p");
+      blurb.style.marginTop = ".5rem";
+      blurb.textContent = hero.blurb || hero.alt;
+      text.appendChild(blurb);
+    }
+
+    const price = document.createElement("p");
+    price.style.marginTop = ".5rem";
+    price.style.fontWeight = "600";
+    price.textContent =
+      (hero.price || "").toString().trim() || "Price available on request";
+    text.appendChild(price);
+
+    // Lightbox for the hero
+    bindLightbox(wrap, [hero]);
+  }
   }
 
   try {
@@ -81,6 +179,8 @@
 
     const container = document.querySelector("#gallery");
     if (!container) throw new Error("No #gallery section found.");
+    // Hero crown jewel section
+    renderExpectationsFeature(rows, container);
 
     // Group items by THEME
     const byTheme = {};
