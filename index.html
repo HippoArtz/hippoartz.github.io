@@ -23,10 +23,10 @@
     }
     header nav a { margin-right: 16px; }
 
-    /* Slim sticky theme bar (above gallery) */
+    /* Slim sticky theme bar */
     .theme-bar {
       position: sticky;
-      top: 0; /* if your header is sticky, change to the header height (e.g., 56px) */
+      top: 0;
       z-index: 900;
       background: #fff;
       border-bottom: 1px solid #eee;
@@ -34,19 +34,15 @@
       display: flex;
       gap: 8px;
       overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
     }
-    .theme-bar::-webkit-scrollbar { display: none; }
     .theme-bar .pill {
-      white-space: nowrap;
       padding: 6px 10px;
       border: 1px solid #e5e7eb;
       border-radius: 999px;
       background: #fafafa;
-      font-size: .9rem;
       cursor: pointer;
+      white-space: nowrap;
     }
-    .theme-bar .pill:active { transform: translateY(1px); }
 
     /* About photos */
     #about img.artist-photo {
@@ -55,24 +51,18 @@
       float: right;
       margin: 0 0 1rem 1rem;
     }
-  
 
-    /* Description style under each theme heading (rendered by JS) */
     .theme-desc {
       text-align: center;
       font-size: 1.1rem;
       font-style: italic;
       color: #555;
-      margin: .25rem 0 1rem;
+      margin: .25rem auto 1rem;
       max-width: 70ch;
-      margin-left: auto; margin-right: auto;
     }
 
-    /* Full-width image (Recent Show) */
     .fullbleed {
       width: 100%;
-      max-width: 100%;
-      height: auto;
       border-radius: 12px;
       display: block;
     }
@@ -85,11 +75,8 @@
       opacity: .8;
     }
 
-    /* Mobile tweaks */
     @media (max-width: 768px) {
-      .logo-wrap { padding: 6px 8px; }
       .logo-wrap img { height: 40px; }
-      header nav a { margin-right: 10px; font-size: .95rem; }
       #about img.artist-photo {
         float: none;
         display: block;
@@ -101,171 +88,84 @@
 </head>
 
 <body>
-  <!-- Header / Nav -->
-  <header>
-    <div class="logo-wrap">
-      <img src="hippoartzlogo.jpg" alt="Hippo.Artz logo">
-      <nav>
-        <a href="#about">About</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#recent-show">Recent Show</a>
-        <a href="#exhibitions">Exhibitions</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
 
-  <!-- Hero -->
+<!-- Header -->
+<header>
+  <div class="logo-wrap">
+    <img src="hippoartzlogo.jpg" alt="Hippo.Artz logo">
+    <nav>
+      <a href="#about">About</a>
+      <a href="#featured">Featured</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero -->
 <section id="home">
   <h1>Welcome to Hippo Artz</h1>
   <p>Hippo.Artz is where emotion, dream, and defiance spill across canvas.</p>
+</section>
 
-  <div class="button-list">
-    
-    <div class="button-block">
-      <a class="button" href="#about">About the Alchemist</a>
-      <p>Meet Hippo.Artz, acrylic alchemist and visual storyweaver.</p>
-    </div>
+<!-- Featured -->
+<section id="featured" class="section">
+  <h2>Featured</h2>
 
-    <div class="button-block">
-      <a class="button" href="#gallery">Explore Portfolio</a>
-      <p>Surreal figures: fracture, bloom, unbowed.</p>
-    </div>
+  <div style="padding:14px; border:1px solid #ddd; border-radius:12px; margin-bottom:16px;">
+    <strong>Selected for a Biafarin exhibition</strong> (international jury)<br>
+    <a href="https://www.biafarin.com/p/artist.html?name=juanita-losier" target="_blank" rel="noopener noreferrer">
+      View my Biafarin artist page →
+    </a>
+  </div>
 
-    <div class="button-block">
-      <a class="button" href="#contact">Get in Touch</a>
-      <p>Commissions, collabs, deep questions—bring them.</p>
-    </div>
+  <div style="display:flex; gap:14px; flex-wrap:wrap;">
+    <img src="Resize1/hypnagogia.jpg" style="width:220px; border-radius:12px;">
+    <img src="Resize1/armslength.jpg" style="width:220px; border-radius:12px;">
+    <img src="Resize1/scrutiny.jpg" style="width:220px; border-radius:12px;">
+  </div>
 
+  <div style="margin-top:16px;">
+    <div>Some favorites</div>
+    <img src="Resize1/expectations.jpg" style="max-width:100%; border-radius:12px;">
   </div>
 </section>
 
-  <!-- About -->
-  <section id="about" class="section">
-    <h2>About</h2>
-    <img src="Resize1/me1.jpg" alt="Hippo.Artz with 'Mother Earth' artwork" class="artist-photo">
-    <p>Hippo.Artz paints figures suspended in surreal landscapes—bodies reshaped by violence, survival, and reclamation. The work sits in the tension between oppression and defiance, inviting viewers to look longer than comfort allows.</p>
+<!-- About -->
+<section id="about" class="section">
+  <h2>About</h2>
+  <img src="Resize1/me1.jpg" alt="Hippo.Artz with artwork" class="artist-photo">
+  <p>Hippo.Artz paints figures suspended in surreal landscapes—bodies reshaped by violence, survival, and reclamation.</p>
+</section>
 
-    <h2>Meet the Acrylic Alchemist</h2>
-    <div class="about-photo">
-  <img src="Resize1/meplague.jpg" 
-       alt="Nita in plague doctor style, acrylic artist behind Hippo.Artz">
+<!-- Theme Bar -->
+<div class="theme-bar">
+  <button class="pill" data-goto="Queens">Queens</button>
+  <button class="pill" data-goto="Dreamscapes and Nightmares">Dreamscapes & Nightmares</button>
+  <button class="pill" data-goto="Unheard Echoes">Unheard Echoes</button>
+  <button class="pill" data-goto="In Memory of">In Memory of</button>
 </div>
-    <p>Welcome to HIPPO.ARTZ: a novice apothecary of experimentation with color, texture, and storytelling. <strong>Hippo.Artz</strong> is a self-taught acrylic painter and visual storyweaver. The canvases explore how <strong>emotion</strong> and <strong>identity</strong> take shape through bold strokes, surreal dreamscapes, and Black Girl Magic.</p>
 
-    <blockquote class="theme-desc">“I am a pessimist if I am not careful.” — Octavia E. Butler</blockquote>
+<!-- Gallery -->
+<section id="gallery" class="section">
+  <h2>Gallery</h2>
+</section>
 
-    <p>Every piece is layered with <strong>emotion</strong>, lived experience, and a shimmer of <em>Black Girl Magic</em>. Acrylic on canvas and unfinished wood is the primary medium.</p>
+<!-- Contact -->
+<section id="contact" class="section">
+  <h2>Get in Touch</h2>
+  <p>Email: <a href="mailto:hippo.artz@gmail.com">hippo.artz@gmail.com</a></p>
+</section>
 
-    <p>Outside the studio: public health work and two cats, Fawn and Goatee. This site is both portfolio and playground—browse, reflect, connect. <em>Be well.</em></p>
-  </section>
-<div class="button-row">
-  <a class="button" href="#about">About the Alchemist</a>
-  <a class="button" href="#gallery">Explore Portfolio</a>
-  <a class="button" href="#contact">Get in Touch</a>
-</div>
-  <!-- Projects -->
-  <section id="projects" class="section">
-    <h2>Current Project Themes</h2>
-    <ul style="line-height:1.6; margin-bottom:1rem;">
-      <li><strong>Queens</strong> — Beauty, visibility, identity, representation, belonging.</li>
-      <li><strong>Dreamscapes and Nightmares</strong> — Without darkness, how would we know the light? Eerie, surreal, close to the veil.</li>
-      <li><strong>Unheard Echoes</strong> — Chains, crowns, tears—the weight and endurance of Black women.</li>
-      <li><strong>In Memory of</strong> — Tender reckonings, grief-work, remembrance.</li>
-    </ul>
-  </section>
+<!-- Footer -->
+<footer>
+  <img src="hippoartzlogo.jpg" alt="Hippo.Artz logo" style="height:50px;">
+  <p>© 2025 Hippo.Artz</p>
+</footer>
 
-  <!-- Slim sticky theme bar (sits above the gallery) -->
-  <div class="theme-bar">
-    <button class="pill" data-goto="Queens">Queens</button>
-    <button class="pill" data-goto="Dreamscapes">Dreamscapes</button>
-    <button class="pill" data-goto="Nightmares">Nightmares</button>
-    <button class="pill" data-goto="Unheard Echoes">Unheard Echoes</button>
-    <button class="pill" data-goto="In Memory of">In Memory of</button>
-  </div>
-
-  <!-- Gallery -->
-  <section id="gallery" class="section">
-    <h2>Gallery</h2>
-    <!-- Sections + images are injected below by render-gallery.js:
-         Queens (desc) + images,
-         Dreamscapes and Nightmares (desc) + images, etc. -->
-  </section>
-
-  <!-- Recent Show -->
-  <section id="recent-show">
-    <h2>Recent Show</h2>
-    <img src="Resize1/me-artspace.jpg" alt="Hippo.Artz at a recent exhibition" class="fullbleed">
-    <p>A snapshot from a recent exhibition—work from multiple series in conversation with the audience.</p>
-  </section>
-
-  <!-- Exhibitions -->
-  <section id="exhibitions">
-    <h2>Exhibitions</h2>
-    <p>Upcoming shows, past events, and highlights.</p>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="section">
-    <h2>Get in Touch</h2>
-    <p>Commissions, collabs, or the deep questions you can’t shake—bring them.</p>
-    <p><strong>Email:</strong> <a href="mailto:hippo.artz@gmail.com">hippo.artz@gmail.com</a> &nbsp;|&nbsp; <strong>Phone:</strong> <a href="tel:+18043477574">804-347-7574</a></p>
-
-    <div class="social">
-      <a href="https://www.amazon.com/hz/wishlist/ls/1KUUML0G178XD?ref_=wl_share" target="_blank" rel="noopener">Amazon Wish List</a>
-      <a href="https://www.tiktok.com/@hippo.artz?_t=ZT-8zaFoODn5yg&_r=1" target="_blank" rel="noopener">TikTok</a>
-      <a href="https://www.facebook.com/share/1CiBRwgVrH/" target="_blank" rel="noopener">Facebook</a>
-      <a href="https://instagram.com/hippo.artz" target="_blank" rel="noopener">Instagram</a>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <div class="logo-wrap" style="justify-content:center;">
-      <img src="hippoartzlogo.jpg" alt="Hippo.Artz logo">
-    </div>
-    <p>© 2025 Hippo.Artz. All rights reserved.</p>
-  </footer>
-
-  <!-- Scripts: load AFTER the page -->
- <script src="lightbox.js?v=9" defer></script>
+<!-- Scripts -->
+<script src="lightbox.js?v=9" defer></script>
 <script src="render-gallery.js?v=9" defer></script>
 
-  <!-- Alias + smooth scroll for theme buttons (works with the sticky bar) -->
-  <script>
-    const ALIAS = {
-      "queens": "Queens",
-      "dreamscapes": "Dreamscapes and Nightmares",
-      "nightmares": "Dreamscapes and Nightmares",
-      "unheard echoes": "Unheard Echoes",
-      "unheard echos": "Unheard Echoes",
-      "in memory of": "In Memory of",
-      "in living memory": "In Memory of"
-    };
-    function slugify(t){ return String(t).toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,''); }
-    function resolveSection(label){ const k = String(label||"").trim().toLowerCase(); return ALIAS[k] || label; }
-
-    function wireThemeNav(){
-      document.querySelectorAll('.theme-bar button').forEach(btn => {
-        btn.addEventListener('click', () => {
-          const raw = btn.getAttribute('data-goto') || btn.textContent;
-          const target = resolveSection(raw);
-          const id = 'sec-' + slugify(target);
-          const el = document.getElementById(id);
-          if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        });
-      });
-    }
-
-    document.addEventListener('DOMContentLoaded', () => {
-      // Wait until render-gallery.js creates the <h3> headings with IDs
-      let tries = 0;
-      const t = setInterval(() => {
-        if (document.querySelector('#gallery h3')) { clearInterval(t); wireThemeNav(); }
-        if (++tries > 30) clearInterval(t);
-      }, 200);
-    });
-  </script>
 </body>
 </html>
-<script src="render-gallery.js?v=6"></script>
