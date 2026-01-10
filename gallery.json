@@ -3,7 +3,7 @@
     "file": "pimplepop.jpg",
     "title": "Acne",
     "size": "8x10in",
-    "alt": "A green figure smiles as the pimples are popped",
+    "alt": "A green skinned ghastly face smiles wickedly as they use gnarled fingers with miscolored nails to pop pimples",
     "blurb": "tbd",
     "price": "POR",
     "medium": "acrylic paint on stretched canvas",
@@ -14,8 +14,8 @@
     "title": "At Arms Length",
     "size": "24x20in",
     "alt": "tbd",
-    "blurb": "tbd",
-    "price": "At 'Arm’s Length' illustrates how those who make their home beneath the sea are both mesmerizing and deadly. Like the ocean and its creatures within, beauty invites reverence while revealing only a shadow of its violent potential. To survive, we must avoid its direct, and captivating gaze. Safety is found only when we embrace admiration from afar, because to draw too close is to risk everything ",
+    "blurb": "At “Arm’s Length” illustrates how those who make their home beneath the sea are both mesmerizing and deadly. Like the ocean and its creatures within, beauty invites reverence while revealing only a shadow of its violent potential. To survive, we must avoid its direct, and captivating gaze. Safety is found only when we embrace admiration from afar, because to draw too close is to risk everything ",
+    "price": "At “Arm’s Length” illustrates how those who make their home beneath the sea are both mesmerizing and deadly. Like the ocean and its creatures within, beauty invites reverence while revealing only a shadow of its violent potential. To survive, we must avoid its direct, and captivating gaze. Safety is found only when we embrace admiration from afar, because to draw too close is to risk everything ",
     "medium": "acrylic paint on stretched canvas",
     "theme": "Dreamscapes & Nightmares"
   },
@@ -27,26 +27,6 @@
     "blurb": "tbd",
     "price": "POR",
     "medium": "acrylic paint on stretched canvas",
-    "theme": "Dreamscapes & Nightmares"
-  },
-  {
-    "file": "cowbefore.jpg",
-    "title": "Bessie-Happy Cow",
-    "size": "8x6in, 1/4in",
-    "alt": "friendly cow in good health",
-    "blurb": "happy cow in lively form",
-    "price": "happy cow in lively form",
-    "medium": "acrylic paint on unfinished wood",
-    "theme": "Dreamscapes & Nightmares"
-  },
-  {
-    "file": "cowafter.jpg",
-    "title": "Bessie-Mad Cow",
-    "size": "8x6in, 1/4in",
-    "alt": "decaying cow with top of skull removed",
-    "blurb": "mad cow in walking dead form",
-    "price": "mad cow in walking dead form",
-    "medium": "acrylic paint on unfinished wood",
     "theme": "Dreamscapes & Nightmares"
   },
   {
@@ -96,7 +76,7 @@
     "alt": "tbd",
     "blurb": "tbd",
     "price": "Commissioned: Original skateboard design",
-    "medium": "acrylic paint on unfinished wood",
+    "medium": "acrylic paint on unfinished wood/skateboard deck",
     "theme": "Dreamscapes & Nightmares"
   },
   {
@@ -117,6 +97,46 @@
     "blurb": "tbd",
     "price": "POR",
     "medium": "acrylic paint on stretched canvas",
+    "theme": "Dreamscapes & Nightmares"
+  },
+  {
+    "file": "cardiovascular1.jpg",
+    "title": "For Dr.MiddleLittle",
+    "size": "16x20in",
+    "alt": "tbd",
+    "blurb": "tbd",
+    "price": "SOLD",
+    "medium": "acrylic paint on stretched canvas",
+    "theme": "Dreamscapes & Nightmares"
+  },
+  {
+    "file": "cardiovascular2.jpg",
+    "title": "For Dr.MiddleLittle",
+    "size": "16x20in",
+    "alt": "tbd",
+    "blurb": "tbd",
+    "price": "SOLD",
+    "medium": "acrylic paint on stretched canvas",
+    "theme": "Dreamscapes & Nightmares"
+  },
+  {
+    "file": "heartbox1.jpg",
+    "title": "For Dr.MiddleLittle",
+    "size": "10x6in, 1/8in",
+    "alt": "tbd",
+    "blurb": "tbd",
+    "price": "SOLD",
+    "medium": "acrylic paint on unfinished wood",
+    "theme": "Dreamscapes & Nightmares"
+  },
+  {
+    "file": "heartbox2.jpg",
+    "title": "For Dr.MiddleLittle",
+    "size": "10x6in, 1/8in",
+    "alt": "tbd",
+    "blurb": "tbd",
+    "price": "SOLD",
+    "medium": "acrylic paint on unfinished wood",
     "theme": "Dreamscapes & Nightmares"
   },
   {
@@ -166,16 +186,6 @@
     "alt": "an eye with a spider stretched across the lids",
     "blurb": "Eye see an itsy bitsy spider",
     "price": "Eye see an itsy bitsy spider",
-    "medium": "acrylic paint on stretched canvas",
-    "theme": "Dreamscapes & Nightmares"
-  },
-  {
-    "file": "eyebodymask.jpg",
-    "title": "Mask Selection",
-    "size": "16x20in",
-    "alt": "tbd",
-    "blurb": "tbd",
-    "price": "POR",
     "medium": "acrylic paint on stretched canvas",
     "theme": "Dreamscapes & Nightmares"
   },
@@ -485,7 +495,7 @@
     "size": "8x6in",
     "alt": "tbd",
     "blurb": "tbd",
-    "price": "ON LOAN",
+    "price": "NFS",
     "medium": "acrylic paint on stretched canvas",
     "theme": "In Memory of"
   },
@@ -495,7 +505,7 @@
     "size": "16x20in",
     "alt": "tbd",
     "blurb": "tbd",
-    "price": "POR",
+    "price": "NFS",
     "medium": "acrylic paint on stretched canvas",
     "theme": "In Memory of"
   },
@@ -505,7 +515,7 @@
     "size": "16x20in",
     "alt": "tbd",
     "blurb": "tbd",
-    "price": "POR",
+    "price": "NFS",
     "medium": "acrylic paint on stretched canvas",
     "theme": "In Memory of"
   },
@@ -515,7 +525,7 @@
     "size": "16x20in",
     "alt": "tbd",
     "blurb": "tbd",
-    "price": "POR",
+    "price": "NFS",
     "medium": "acrylic paint on stretched canvas",
     "theme": "In Memory of"
   },
@@ -528,46 +538,6 @@
     "price": "SOLD",
     "medium": "acrylic paint on unfinished wood panel",
     "theme": "In Memory of"
-  },
-  {
-    "file": "cardiovascular1.jpg",
-    "title": "For Dr.MiddleLittle",
-    "size": "16x20in",
-    "alt": "tbd",
-    "blurb": "tbd",
-    "price": "SOLD",
-    "medium": "acrylic paint on stretched canvas",
-    "theme": "Dreamscapes & Nightmares"
-  },
-  {
-    "file": "cardiovascular2.jpg",
-    "title": "For Dr.MiddleLittle",
-    "size": "16x20in",
-    "alt": "tbd",
-    "blurb": "tbd",
-    "price": "SOLD",
-    "medium": "acrylic paint on stretched canvas",
-    "theme": "Dreamscapes & Nightmares"
-  },
-  {
-    "file": "heartbox1.jpg",
-    "title": "For Dr.MiddleLittle",
-    "size": "10x6in, 1/8in",
-    "alt": "tbd",
-    "blurb": "tbd",
-    "price": "SOLD",
-    "medium": "acrylic paint on unfinished wood",
-    "theme": "Dreamscapes & Nightmares"
-  },
-  {
-    "file": "heartbox2.jpg",
-    "title": "For Dr.MiddleLittle",
-    "size": "10x6in, 1/8in",
-    "alt": "tbd",
-    "blurb": "tbd",
-    "price": "SOLD",
-    "medium": "acrylic paint on unfinished wood",
-    "theme": "Dreamscapes & Nightmares"
   },
   {
     "file": "mosaicafro.jpg",
@@ -607,16 +577,6 @@
     "blurb": "tbd",
     "price": "POR",
     "medium": "acrylic paint on canvas panel",
-    "theme": "Queens"
-  },
-  {
-    "file": "flowergirl.jpg",
-    "title": "Bloom Through the Break",
-    "size": "16x20in",
-    "alt": "A face split open with flowers blooming from within.",
-    "blurb": "Pain blossoms into a garden that insists on being seen.",
-    "price": "Pain blossoms into a garden that insists on being seen.",
-    "medium": "acrylic paint on stretched canvas",
     "theme": "Queens"
   },
   {
@@ -860,6 +820,16 @@
     "theme": "Queens"
   },
   {
+    "file": "mauvebeauty.jpg",
+    "title": "Mauve",
+    "size": "16x20in",
+    "alt": "tbd",
+    "blurb": "tbd",
+    "price": "POR",
+    "medium": "acrylic paint on stretched canvas",
+    "theme": "Queens"
+  },
+  {
     "file": "plaguemaster.jpg",
     "title": "Miasma In the Moonlight",
     "size": "16x20in",
@@ -890,12 +860,22 @@
     "theme": "Queens"
   },
   {
-    "file": "flowerpour.jpg",
-    "title": "Oasis",
+    "file": "motherearth.jpg",
+    "title": "Mother Earth",
     "size": "16x20in",
-    "alt": "A body formed as a cascading waterfall crowned with a bloom.",
-    "blurb": "A body becomes the landscape—vacation as return to the elemental.",
-    "price": "A body becomes the landscape—vacation as return to the elemental.",
+    "alt": "tbd",
+    "blurb": "tbd",
+    "price": "ON LOAN",
+    "medium": "acrylic paint on stretched canvas",
+    "theme": "Queens"
+  },
+  {
+    "file": "flowergirl.jpg",
+    "title": "Petals",
+    "size": "16x20in",
+    "alt": "",
+    "blurb": "",
+    "price": "",
     "medium": "acrylic paint on stretched canvas",
     "theme": "Queens"
   },
@@ -947,16 +927,6 @@
     "blurb": "tbd",
     "price": "SOLD",
     "medium": "acrylic paint on canvas panel",
-    "theme": "Queens"
-  },
-  {
-    "file": "girlnap.jpg",
-    "title": "Repose",
-    "size": "16x20in",
-    "alt": "tbd",
-    "blurb": "tbd",
-    "price": "POR",
-    "medium": "acrylic paint on stretched canvas",
     "theme": "Queens"
   },
   {
@@ -1055,6 +1025,16 @@
     "size": "8x6in",
     "alt": "tbd",
     "blurb": "tbd",
+    "price": "SOLD",
+    "medium": "acrylic paint on stretched canvas",
+    "theme": "Queens"
+  },
+  {
+    "file": "appeal.jpg",
+    "title": "To the Gods",
+    "size": "16x20in",
+    "alt": "a woman crouches hands outstretched pleading to unseen gods",
+    "blurb": "tbd",
     "price": "POR",
     "medium": "acrylic paint on stretched canvas",
     "theme": "Queens"
@@ -1110,16 +1090,6 @@
     "theme": "Queens"
   },
   {
-    "file": "relaxed.jpg",
-    "title": "",
-    "size": "16x20in",
-    "alt": "tbd",
-    "blurb": "tbd",
-    "price": "POR",
-    "medium": "acrylic paint on stretched canvas",
-    "theme": "Queens"
-  },
-  {
     "file": "tornwing.jpg",
     "title": "Blue In Pain",
     "size": "16x20in",
@@ -1145,7 +1115,7 @@
     "size": "16x20in",
     "alt": "tbd",
     "blurb": "tbd",
-    "price": "The 'Borderlands of Hypnagogia' captures the disorienting, fluid space we all cross between wakefulness and sleep. The woman's face is split between the sharp clarity of day and the clarity it brings, and the vast velvety darkness of the subconscious. A stream of fluid dreams pours from her mouth, an exhalation of everything the waking body rejects. Her eyes are alert, yet drifting, suspended in that fragile state where thoughts melt into visions, and the hard edges of reality begin to soften. The piece captures the exact moment the mind loosens its grip and surrenders to the formless, welcoming pull of dream.",
+    "price": "The Borderlands of Hypnagogia\" captures the disorienting, fluid space we all cross between wakefulness and sleep. The woman's face is split between the sharp clarity of day and the clarity it brings, and the vast velvety darkness of the subconscious. A stream of fluid dreams pours from her mouth, an exhalation of everything the waking body rejects. Her eyes are alert, yet drifting, suspended in that fragile state where thoughts melt into visions, and the hard edges of reality begin to soften. The piece captures the exact moment the mind loosens its grip and surrenders to the formless, welcoming pull of dream.",
     "medium": "acrylic paint on stretched canvas",
     "theme": "Unheard Echoes"
   },
@@ -1240,8 +1210,8 @@
     "theme": "Unheard Echoes"
   },
   {
-    "file": "mauvebeauty.jpg",
-    "title": "Mauve",
+    "file": "eyebodymask.jpg",
+    "title": "Mask Selection",
     "size": "16x20in",
     "alt": "tbd",
     "blurb": "tbd",
@@ -1256,16 +1226,6 @@
     "alt": "Face deconstructed, flowers blossoming",
     "blurb": "She splits herself wide, tearing away the pieces that bind. From the wounds blooms force their way through. The blooms are vivid, unyielding, each petal is beauty and strength. Pain blossoms into a garden that insists on being seen.",
     "price": "She splits herself wide, tearing away the pieces that bind. From the wounds blooms force their way through. The blooms are vivid, unyielding, each petal is beauty and strength. Pain blossoms into a garden that insists on being seen.",
-    "medium": "acrylic paint on stretched canvas",
-    "theme": "Unheard Echoes"
-  },
-  {
-    "file": "motherearth.jpg",
-    "title": "Mother Earth",
-    "size": "16x20in",
-    "alt": "tbd",
-    "blurb": "tbd",
-    "price": "ON LOAN",
     "medium": "acrylic paint on stretched canvas",
     "theme": "Unheard Echoes"
   },
@@ -1304,8 +1264,8 @@
     "title": "Scrutiny",
     "size": "16x20in",
     "alt": "tbd",
-    "blurb": "tbd",
-    "price": "'Scrutiny' shines a light on whether it is better to be seen or to remain invisible.  Under the harsh gaze of observers, our spines bow, our heads hang low, and we are silenced. Visibility becomes punishment, a pressure that warps both body and identity. We wither, we break, we shrink, decaying into a mere shadow of our potential. Who are we when we are shaped and molded by the gaze of others?",
+    "blurb": "“Scrutiny” shines a light on whether it is better to be seen or to remain invisible.  Under the harsh gaze of observers, our spines bow, our heads hang low, and we are silenced. Visibility becomes punishment, a pressure that warps both body and identity. We wither, we break, we shrink, decaying into a mere shadow of our potential. Who are we when we are shaped and molded by the gaze of others?",
+    "price": "“Scrutiny” shines a light on whether it is better to be seen or to remain invisible.  Under the harsh gaze of observers, our spines bow, our heads hang low, and we are silenced. Visibility becomes punishment, a pressure that warps both body and identity. We wither, we break, we shrink, decaying into a mere shadow of our potential. Who are we when we are shaped and molded by the gaze of others?",
     "medium": "acrylic paint on stretched canvas",
     "theme": "Unheard Echoes"
   },
@@ -1315,7 +1275,7 @@
     "size": "16x20in",
     "alt": "A figure reaching upward as water closes in; a struggle to rise.",
     "blurb": "She fights her demons. A flailing hand breaks the surface, twisting capture into resistance. Drowning becomes survival. Defiance is survival even under the weight of herstory  and her future",
-    "price": "On Loan",
+    "price": "POR",
     "medium": "acrylic paint on stretched canvas",
     "theme": "Unheard Echoes"
   },
@@ -1370,16 +1330,6 @@
     "theme": "Unheard Echoes"
   },
   {
-    "file": "appeal.jpg",
-    "title": "To the Gods",
-    "size": "16x20in",
-    "alt": "a woman crouches hands outstretched pleading to unseen gods",
-    "blurb": "tbd",
-    "price": "POR",
-    "medium": "acrylic paint on stretched canvas",
-    "theme": "Unheard Echoes"
-  },
-  {
     "file": "trapped.jpg",
     "title": "Trapped",
     "size": "18x24in",
@@ -1415,6 +1365,146 @@
     "size": "16x20in",
     "alt": "tbd",
     "blurb": "tbd",
+    "price": "POR",
+    "medium": "acrylic paint on stretched canvas",
+    "theme": "Unheard Echoes"
+  },
+  {
+    "file": "goldhead.jpg",
+    "title": "Mask",
+    "size": "",
+    "alt": "",
+    "blurb": "",
+    "price": "POR",
+    "medium": "acrylic paint on stretched canvas",
+    "theme": "Unheard Echoes"
+  },
+  {
+    "file": "braids.jpg",
+    "title": "Modled",
+    "size": "16x20in",
+    "alt": "",
+    "blurb": "",
+    "price": "POR",
+    "medium": "acrylic paint on stretched canvas",
+    "theme": "Queens"
+  },
+  {
+    "file": "hedda.jpg",
+    "title": "Hedda",
+    "size": "20x24in",
+    "alt": "",
+    "blurb": "",
+    "price": "POR",
+    "medium": "acrylic paint on stretched canvas",
+    "theme": "Unheard Echoes"
+  },
+  {
+    "file": "expressionblue.jpg",
+    "title": "Blue Hair",
+    "size": "16x20in",
+    "alt": "",
+    "blurb": "",
+    "price": "POR",
+    "medium": "acrylic paint on stretched canvas",
+    "theme": "Queens"
+  },
+  {
+    "file": "expressionorange.jpg",
+    "title": "Orange scream",
+    "size": "16x20in",
+    "alt": "orange background with a woman with a teenie afro screaming",
+    "blurb": "",
+    "price": "POR",
+    "medium": "acrylic paint on stretched canvas",
+    "theme": "Unheard Echoes"
+  },
+  {
+    "file": "medusa.jpg",
+    "title": "Medusa Queen",
+    "size": "16x20in",
+    "alt": "brown skinned woman with an updo made of snakes",
+    "blurb": "",
+    "price": "POR",
+    "medium": "acrylic paint on stretched canvas",
+    "theme": "Dreamscapes & Nightmares"
+  },
+  {
+    "file": "pinkgum.jpg",
+    "title": "Pink",
+    "size": "16x20in",
+    "alt": "",
+    "blurb": "",
+    "price": "POR",
+    "medium": "acrylic paint on stretched canvas",
+    "theme": "Queens"
+  },
+  {
+    "file": "bluebooks.jpg",
+    "title": "Blue",
+    "size": "16x20in",
+    "alt": "",
+    "blurb": "",
+    "price": "POR",
+    "medium": "acrylic paint on stretched canvas",
+    "theme": "Queens"
+  },
+  {
+    "file": "nightout.jpg",
+    "title": "Golden Dress",
+    "size": "16x20in",
+    "alt": "",
+    "blurb": "",
+    "price": "POR",
+    "medium": "acrylic paint on stretched canvas",
+    "theme": "Queens"
+  },
+  {
+    "file": "eventuality.jpg",
+    "title": "Eventuality",
+    "size": "16x20in",
+    "alt": "predatory eye, lined with scales, with wet tentacles",
+    "blurb": "",
+    "price": "POR",
+    "medium": "acrylic paint on stretched canvas",
+    "theme": "Dreamscapes & Nightmares"
+  },
+  {
+    "file": "medusa.jpg",
+    "title": "Modern Medusa",
+    "size": "16x20in",
+    "alt": "",
+    "blurb": "",
+    "price": "POR",
+    "medium": "acrylic paint on stretched canvas",
+    "theme": "Dreamscapes & Nightmares"
+  },
+  {
+    "file": "skindeep.jpg",
+    "title": "Unseen",
+    "size": "16x20in",
+    "alt": "Woman sitting on chair stiffly, she is nude, exposed, flesh peeled back to expose bone",
+    "blurb": "",
+    "price": "POR",
+    "medium": "acrylic paint on stretched canvas",
+    "theme": "Unheard Echoes"
+  },
+  {
+    "file": "silhouette.jpg",
+    "title": "Danger",
+    "size": "16x20in",
+    "alt": "",
+    "blurb": "",
+    "price": "POR",
+    "medium": "acrylic paint on stretched canvas",
+    "theme": "Unheard Echoes"
+  },
+  {
+    "file": "harlequin.jpg",
+    "title": "Target Jester",
+    "size": "18x24in",
+    "alt": "",
+    "blurb": "",
     "price": "POR",
     "medium": "acrylic paint on stretched canvas",
     "theme": "Unheard Echoes"
